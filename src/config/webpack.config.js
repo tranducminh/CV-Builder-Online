@@ -470,8 +470,10 @@ module.exports = function(webpackEnv) {
               exclude: sassModuleRegex,
               use: getStyleLoaders(
                 {
+                  modules: true,
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
+                  localIdentName: '[hash:base64:5]'
                 },
                 'sass-loader'
               ),
