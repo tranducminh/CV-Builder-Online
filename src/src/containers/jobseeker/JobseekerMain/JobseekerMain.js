@@ -1,5 +1,4 @@
 import React from 'react';
-import styles from './JobseekerMain.scss';
 import { Route, Switch } from 'react-router-dom'
 import Homepage from '../Homepage/Homepage';
 import Menu from '../Menu/Menu';
