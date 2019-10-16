@@ -38,12 +38,14 @@ $main_color : #1a8a58;
 
         :global(.navbar-collapse){
             border-top: 1px solid  #e7e7e7;
+            justify-content: flex-end;
             
         }
 
         :global(.navbar-toggler){
             float: right;
         }
+        
        
         :global(.nav-item ) {
             &:hover {
