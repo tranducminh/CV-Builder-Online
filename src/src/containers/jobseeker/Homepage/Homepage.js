@@ -1,11 +1,11 @@
 import React from 'react';
-import SubMenu from '../subMenu/SubMenu';
+import SearchBar from './../../../components/SearchBar/SearchBar'
 class Homepage extends React.Component {
     render(){
         return(
-            <div>
-                <SubMenu />
-            </div>
+            <React.Fragment>
+                <SearchBar />
+                </React.Fragment>
         )
     }
 }

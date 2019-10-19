@@ -10,8 +10,8 @@ class Menu extends React.Component {
                     <div className="navbar-brand" href="#">
                         <Logo />
                     </div>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-                        <a><i class="fas fa-bars"></i></a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
+                        <a><i className="fas fa-bars"></i></a>
                     </button>
                     <div id="navbarNavDropdown" className="navbar-collapse">
                         <ul className="navbar-nav ">

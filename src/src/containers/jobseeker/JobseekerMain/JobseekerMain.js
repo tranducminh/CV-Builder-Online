@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom'
 import Homepage from '../Homepage/Homepage';
 import Menu from '../Menu/Menu';
-
+import SubMenu from '../subMenu/SubMenu'
 
 class JobseekerMain extends React.Component {
     constructor(){
@@ -13,12 +13,13 @@ class JobseekerMain extends React.Component {
     }
     render(){
         return(
-            <div>
+            <React.Fragment>
                 <Menu />
+                <SubMenu />
                 <Switch>
                     <Route path='/' exact component={Homepage} />
                 </Switch>
-            </div>
+                </React.Fragment>
         )
     }
 }
