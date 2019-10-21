@@ -5,43 +5,55 @@
     background: #f1f1f1;
     box-sizing: border-box;
     img {
-        width: 90%;
-        height: 90%;
+        width: 100%;
+        height: 96%;
         transition: .4s;
-        margin: 10px;
+        margin-top: 10px;
     }
     h2 {
         font-weight: bold;
         margin-top: 16px !important;
         color: #363636;
+        font-size: 16px;
     }
     .inner__width {
         width: 100%;
-        // max-width: 1200px;
         margin: auto;
-        padding: 0 20px;
+        // padding: 0 10px;
+        display: block !important;
         >h1 {
             text-align: center;
             text-transform: uppercase;
             color: #333;
+            font-size: 32px;
         }
         
         .cv {
             display: flex;
             // flex-wrap: wrap-reverse;
             justify-content: center;
+            margin-top: 30px;
             .cv__flex {
                 border: 1px solid #d7d7d7;
-                margin: 0px 20px;
-                // flex: 25%;
-                overflow: hidden;
-                .cv__Title {
+                // margin: 0px 20px;
+                margin-bottom: 20px;
+                // overflow: hidden;
+                height: 100%;
+                &:hover {
+                    cursor: pointer;
+                }
+                .cvTitle {
                     border-top: 1px solid #d7d7d7;
                     text-align: center;
                     color: #626262;
                     font-size: 16px;
                     font-weight: 700;
+                    height: 50px;
+                    line-height: 50px;
                     background: #ffffff;
+                    &:hover h2{
+                        color: #1a8a58 ;
+                    }
                 }
             }
             
@@ -55,7 +67,13 @@
     }
     
 }
-
+:global(.image) {
+    width: 100%;
+    height: 100%;
+    &:hover img {
+        transform: scale(1.05);
+    }
+}
 // @media screen and (min-width: 576px){
 //     :global(.container) {
 //         max-width: 1140px !important;
