@@ -49,6 +49,11 @@ const searchBar = (props) => {
                             />
                         </div>
                     </div>
+                    <div className={` secondRow ${styles.SecondRow}`}>
+                        <div className={``}>
+                            <span>Tìm việc làm nhanh, uy tín, mới nhất trên Mạng Tuyển dụng, Việc Làm TopCV</span>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

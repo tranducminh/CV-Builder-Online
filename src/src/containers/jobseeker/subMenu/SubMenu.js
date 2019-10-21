@@ -22,8 +22,8 @@ class SubMenu extends React.Component {
                                         <a>Việc làm phù hợp</a>
                                     </li>
                                     <li className="nav-item"><a>Việc làm đã lưu</a></li>
-                                    <li className="nav-item"><a>Việc là đã ứng tuyển</a></li>
-                                    <li className="nav-item"><a>Cài đặt gợi ý việc làm</a></li>
+                                    <li className="nav-item"><a>Việc là, đã ứng tuyển</a></li>
+                                    {/* <li className="nav-item"><a>Cài đặt gợi ý việc làm</a></li> */}
 
                                 </ul>
 
