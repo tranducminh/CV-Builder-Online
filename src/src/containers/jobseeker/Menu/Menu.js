@@ -16,7 +16,7 @@ class Menu extends React.Component {
                     <div id="navbarNavDropdown" className="navbar-collapse">
                         <ul className="navbar-nav ">
                             <li className="nav-item">
-                                <a className="active">Việc làm</a></li>
+                                <a href="" className="active">Việc làm</a></li>
                             <li className="nav-item">
                                 <a>Tạo CV</a></li>
                             <li className="nav-item">
