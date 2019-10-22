@@ -36,7 +36,7 @@ class Footer extends React.Component{
                         </div>
                     </div>
                     <div className={`${styles.box_right}`}>
-                        <h4>Bắt đầu ngay với email</h4>
+                        <h5>Bắt đầu ngay với email</h5>
                         <div>
                             <input type="text" placeholder="Nhập email" />
                             <button>Tiếp</button>

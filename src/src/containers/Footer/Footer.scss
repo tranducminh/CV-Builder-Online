@@ -3,7 +3,6 @@
 }
 .footer{
     width: 100%;
-    height: 320px;
     .container{
         width: 100%;
         height: 85%;
@@ -14,11 +13,13 @@
             max-width: 1170px;
             margin: 0 auto;
             display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
             .box_left{
                 float: initial;
                 margin: 0px 48px 20px 0px;
                 color: rgb(255, 255, 255);
-                width: 25%;
+                width: 100%;
                 div{
                     span{
                         font-size: 15px;
@@ -28,7 +29,7 @@
             }
             .box_content{
                 display: flex;
-                width: 45%;
+                width: 100%;
                 color: white;
                 a{
                     display: block;
@@ -71,9 +72,9 @@
                 }
             }
             .box_right{
-                width: 30%;
+                width: 100%;
                 color: white;
-                h4{
+                h5{
                     margin-bottom: 30px;
                 }
                 div{
@@ -114,13 +115,15 @@
     .copyright{
         background-color: #f1f1f1;
         display: flex;
+        flex-direction: column;
         padding-top: 10px;
         .copyright_content{
-            width: 70%;
+            width: 100%;
             text-align: center;
         }
         .quick_menu{
-            width: 30%;
+            width: 100%;
+            text-align: center;
             a{
                 margin-right: 10px;
                 color: rgb(31, 87, 65);
@@ -130,5 +133,32 @@
                 }
             }
         }
+    }
+}
+@media screen and (min-width: 1025px){
+    .footer{
+        .container{
+            .footer_container{
+                flex-direction: row;
+                .box_left{
+                    width: 25%;
+                }
+                .box_content{
+                    width: 45%;
+                }
+                .box_right{
+                    width: 30%;
+                }
+            }
+        }
+            .copyright{
+                flex-direction: row;
+                .copyright_content{
+                    width: 70%;
+                }
+                .quick_menu{
+                    width: 30%;
+                }
+            }
     }
 }
