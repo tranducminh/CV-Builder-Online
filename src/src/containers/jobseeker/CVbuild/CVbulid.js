@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Cvbuild.scss';
 import CVBuildBox from './CVbuildBox'
+import CVpreview from '../CVpreview/CVpreview'
 
 class CVbulid extends React.Component {
     constructor() {
@@ -54,6 +55,7 @@ class CVbulid extends React.Component {
                         ))
                         }
                     </div>
+                    <CVpreview />
                 </div>
             </div>
         )
