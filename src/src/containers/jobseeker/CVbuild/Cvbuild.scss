@@ -4,18 +4,7 @@
     padding: 60px 0;
     background: #f1f1f1;
     box-sizing: border-box;
-    img {
-        width: 100%;
-        height: 96%;
-        transition: .4s;
-        margin-top: 10px;
-    }
-    h2 {
-        font-weight: bold;
-        margin-top: 16px !important;
-        color: #363636;
-        font-size: 16px;
-    }
+    
     .inner__width {
         width: 100%;
         margin: auto;
@@ -29,35 +18,16 @@
         }
         
         .cv {
-            display: flex;
             // flex-wrap: wrap-reverse;
-            justify-content: center;
+            justify-content: space-between;
             margin-top: 30px;
-            .cv__flex {
-                border: 1px solid #d7d7d7;
-                // margin: 0px 20px;
-                margin-bottom: 20px;
-                // overflow: hidden;
-                height: 100%;
-                &:hover {
-                    cursor: pointer;
-                }
-                .cvTitle {
-                    border-top: 1px solid #d7d7d7;
-                    text-align: center;
-                    color: #626262;
-                    font-size: 16px;
-                    font-weight: 700;
-                    height: 50px;
-                    line-height: 50px;
-                    background: #ffffff;
-                    &:hover h2{
-                        color: #1a8a58 ;
-                    }
-                }
+            .cv_box{
+                display: inline-block;
+                width: 100%;
+                padding: 0px 5px;
             }
-            
         }
+            
         // .border {
         //     width: 180px;
         //     height: 4px;
@@ -67,13 +37,7 @@
     }
     
 }
-:global(.image) {
-    width: 100%;
-    height: 100%;
-    &:hover img {
-        transform: scale(1.05);
-    }
-}
+
 // @media screen and (min-width: 576px){
 //     :global(.container) {
 //         max-width: 1140px !important;
@@ -85,3 +49,14 @@
     
 
 // }
+@media screen and (min-width: 1025px){
+    .cv__section{
+        .inner__width{
+            .cv{
+                .cv_box{
+                    width: 25%;
+                }
+            }
+        }
+    }
+}

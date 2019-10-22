@@ -473,7 +473,7 @@ module.exports = function(webpackEnv) {
                   modules: true,
                   importLoaders: 2,
                   sourceMap: isEnvProduction && shouldUseSourceMap,
-                  localIdentName: '[hash:base64:5]'
+                  localIdentName: '[name]__[local]__[hash:base64:5]'
                 },
                 'sass-loader'
               ),

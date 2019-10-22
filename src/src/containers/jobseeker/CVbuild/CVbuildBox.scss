@@ -1,0 +1,44 @@
+
+.cv__flex {
+    border: 1px solid #d7d7d7;
+    // margin: 0px 20px;
+    margin-bottom: 20px;
+    height:100%;
+    // overflow: hidden;
+    display: inline-block;
+    width: 100%;
+    &:hover {
+        cursor: pointer;
+    }
+    img {
+        width: 100%;
+        height: 96%;
+        transition: .4s;
+    }
+    h2 {
+        font-weight: bold;
+        margin-top: 16px !important;
+        color: #363636;
+        font-size: 16px;
+    }
+    .cvTitle {
+        border-top: 1px solid #d7d7d7;
+        text-align: center;
+        color: #626262;
+        font-size: 16px;
+        font-weight: 700;
+        height: 50px;
+        line-height: 50px;
+        background: #ffffff;
+        &:hover h2{
+            color: #1a8a58 ;
+        }
+    }
+}
+:global(.image) {
+    width: 100%;
+    height: 100%;
+    &:hover img {
+        transform: scale(1.05);
+    }
+}
