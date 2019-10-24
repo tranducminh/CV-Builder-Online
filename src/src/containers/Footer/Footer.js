@@ -10,7 +10,7 @@ class Footer extends React.Component{
                 <div className={`${styles.container}`}>
                 <div className={`${styles.footer_container}`}>
                     <div className={`${styles.box_left}`}>
-                        <Logo className={`${styles.logo}`}/>
+                        <Logo height="2.5em"/>
                         <div>
                             <span>...Đăng tin tuyển dụng miễn phí, hiệu quả cao. Đăng tin tuyển dụng miễn phí, hiệu quả cao</span>
                         </div>
@@ -49,7 +49,7 @@ class Footer extends React.Component{
                         <span>© 2018 CvOnline.com. All Rights Reserved</span>
                     </div>
                     <div className={`${styles.quick_menu}`}>
-                        <a>Việc làm</a>
+                        {/* <a>Việc làm</a> */}
                         <a>Tạo CV</a>
                         <a>Khám phá</a>
                         <a>Công ty</a>

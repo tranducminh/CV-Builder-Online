@@ -1,11 +1,11 @@
 import React from 'react';
 
-import topcv from '../../assets/image/logo.png';
+import topcv from '../../assets/image/logo21.png';
 import classes from './Logo.scss';
 
 const logo = props => (
-  <div className={classes.Logo} style={{ height: props.height }}>
-    <img src={topcv} alt="TopCV" />
+  <div className={classes.Logo} >
+    <img src={topcv} alt="TopCV" style={{ height: props.height }}/>
   </div>
 );
 
