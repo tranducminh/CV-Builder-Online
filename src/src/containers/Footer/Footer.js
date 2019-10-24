@@ -10,7 +10,7 @@ class Footer extends React.Component{
                 <div className={`container ${styles.container}`}>
                 <div className={`${styles.footer_container}`}>
                     <div className={`${styles.box_left}`}>
-                        <Logo className={`${styles.logo}`}/>
+                        <Logo height="2.5em"/>
                         <div>
                             <span>...Đăng tin tuyển dụng miễn phí, hiệu quả cao. Đăng tin tuyển dụng miễn phí, hiệu quả cao</span>
                         </div>

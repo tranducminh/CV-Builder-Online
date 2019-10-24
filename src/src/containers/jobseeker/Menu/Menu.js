@@ -8,7 +8,7 @@ class Menu extends React.Component {
                 <nav className={`navbar-expand-md  ${styles.NavbarCustom}`}>
                 <div className="container">
                     <div className="navbar-brand" href="#">
-                        <Logo />
+                        <Logo height="2em" />
                     </div>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="true" aria-label="Toggle navigation">
                         <a><i className="fas fa-bars"></i></a>
