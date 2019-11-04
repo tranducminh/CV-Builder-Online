@@ -1,0 +1,14 @@
+
+.row1 {
+    border: 1px solid red;
+    padding: 20px;
+    margin: 20px;
+}
+.row1__time {
+    float: left;
+}
+.row1__info {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+}

@@ -14,7 +14,7 @@ class JobseekerMain extends React.Component {
     render(){
         return(
             <React.Fragment>
-                <Menu />
+                {/* <Menu /> */}
                 {/* <SubMenu /> */}
                 <Switch>
                     <Route path='/' exact component={Homepage} />

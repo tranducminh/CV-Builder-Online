@@ -2,6 +2,9 @@ import React from 'react';
 
 import styles from './CvMaker.scss';
 class CVMaker extends React.Component {
+
+
+ 
     render() {
         return (
             // <div className={`${styles.test}`} placeholder="Type something..." contenteditable="true"></div>
@@ -23,6 +26,7 @@ class CVMaker extends React.Component {
                             </div>
                             <div className={`${styles.CVMaker__left__info__job}`}>
                                 <input className={`change ${styles.change}`} placeholder="NHẬP TIÊU ĐỀ CV" contenteditable="true" />
+                                
                             </div>
 
                         </div>
@@ -145,8 +149,10 @@ class CVMaker extends React.Component {
                                 <span className={`${styles.line}`}></span>
                                 <h3>TIẾNG ANH</h3>
                             </div>
-                            <div className={`${styles.CVMaker__left__info__job}`}>
-                                <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
+                            <div className={`${styles.CVMaker__left__info__job}`} >
+                                <input  type="text" 
+                                        name="name"
+                                className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
                             </div>
                         </div>
                     </div>
