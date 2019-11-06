@@ -33,7 +33,7 @@ class Homepage1 extends React.Component {
                             <h1>Ấn tượng với nhà tuyển dụng.</h1>
                             <p>Xây dựng một sơ yếu lý lịch đẹp trong vài phút để có được công việc mơ ước của bạn.</p>
                             <form >
-                                <button type="submit" className={`btn ${styles.btn__build} `}>Build your resume</button>
+                                <button type="submit" className={`btn ${styles.btn__build} `}>Tạo Hồ Sơ     </button>
                             </form>
                         </div>
                     </div>

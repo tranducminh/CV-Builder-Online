@@ -1,5 +1,7 @@
 .container {
-    background-color: #f0f0f0;
+    background-color:#f0f0f0;
+    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    position: relative;
     h3 {
         display: inline-block;
         background: #fff;
@@ -41,12 +43,15 @@
         padding: 2px;
         display: inline-block;
         width: 70%;
-        border: none;
+        border: 1px dashed #b5bfc7 ;
+        outline: none;
         font-size: 14px;
+        border-radius: 3px;
 
 
         &:hover {
-            outline: #3b576d dotted 1px; 
+            border: 1px dashed #3b576d ;
+            border-radius: 3px;
         }
         
     }
@@ -56,13 +61,18 @@
         padding: 2px;
         display: inline-block;
         width: 99%;
-        border: none;
+        border: 1px dashed #b5bfc7 ;
         font-size: 14px;
         font-weight: 500;
         text-align: center;
+        outline: none;
+        border-radius: 3px;
+        // background-color: #ff4242;
+        
 
         &:hover {
-            outline: #3b576d dotted 1px; 
+            border: 1px dashed #3b576d ;
+            border-radius: 3px;
         }
         
     }
@@ -71,13 +81,16 @@
         padding: 2px;
         display: inline-block;
         width: 99%;
-        border: none;
+        border: 1px dashed #b5bfc7 ;
+        outline: none;
         font-size: 14px;
         font-weight: 500;
         text-align: left;
+        border-radius: 3px;
 
         &:hover {
-            outline: #3b576d dotted 1px; 
+            border: 1px dashed #3b576d ;
+            border-radius: 3px; 
         }
         
     }
@@ -93,15 +106,17 @@
 
     .CvMaker {
         width: 100%;
-        margin: 0 100px;
-        // background-color: #fafafa;
+        margin: 20px 320px 20px 0px;
+         background-color: #fff;
+         
         .CvMaker__left {
-             background-color: white;
+            // background-color: #ff4242;
             width: 40%;
             border: 1px solid black;
             padding: 20px 12px;
-             margin: 20px 0;
+            //  margin: 20px 0;
             float: left;
+            // color: ;
             
             
 
@@ -142,16 +157,6 @@
             }
             .CVMaker__left__info {
                 text-align: center;
-                .CVMaker__left__info__name {
-                    
-                    
-                    
-                }
-                .CVMaker__left__info__job {
-                    
-                    
-                    
-                }
             }
         }
         .CvMaker__right {
@@ -160,7 +165,48 @@
             border: 1px solid black;
             border-left: none;
             padding: 20px 12px;
-            margin: 20px 0;
+            // margin: 20px 0;
+        }
+    }
+}
+.tempalte_img {
+    height: 166px;
+    width: 120px;
+}
+.sideBar {
+    margin: 20px 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #222;
+    width: 280px;
+    
+    .sideBar__templates {
+        > h3 {
+            width: 100%;
+            top: 0;
+            margin: 0;
+            padding: 0 15px;
+            position: absolute;
+            line-height: 36px;
+            color: #e2e2e2;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: normal;
+            background-color: #1a1a1a;
+        }
+        height: 50%;
+        position: relative;
+        padding: 36px 0 0 0;
+        .templates_list {
+            .templates_item {
+                cursor: pointer;
+                margin-left: 9px;
+                float: left;
+                margin-bottom: 10px;
+                border: 1px solid #222;
+                padding: 4px;
+            }
         }
     }
 }

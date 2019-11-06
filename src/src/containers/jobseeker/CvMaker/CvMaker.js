@@ -1,5 +1,6 @@
 import React from 'react';
-
+import Education from '../Test/Education';
+import Experience from './../Test/Experience'
 import styles from './CvMaker.scss';
 class CVMaker extends React.Component {
 
@@ -7,7 +8,6 @@ class CVMaker extends React.Component {
  
     render() {
         return (
-            // <div className={`${styles.test}`} placeholder="Type something..." contenteditable="true"></div>
             <div className={`container ${styles.container}`}>
                 <div className={`row ${styles.CvMaker}`}>
                     <div className={`${styles.CvMaker__left}`}>
@@ -45,19 +45,19 @@ class CVMaker extends React.Component {
                                 </p>
                                 <p className={`${styles.changeline}`}>
                                     <b>Ngày sinh</b>
-                                    <input className={`change ${styles.change1}`} placeholder="Nam" contenteditable="true" datatype="select" />
+                                    <input className={`change ${styles.change1}`} placeholder="16-07-1999" contenteditable="true" datatype="select" />
                                 </p>
                                 <p className={`${styles.changeline}`}>
                                     <b>Email</b>
-                                    <input className={`change ${styles.change1}`} placeholder="Nam" contenteditable="true" datatype="select" />
+                                    <input className={`change ${styles.change1}`} placeholder="toanleaderuet@gmail.com" contenteditable="true" datatype="select" />
                                 </p>
                                 <p className={`${styles.changeline}`}>
                                     <b>Điện thoại</b>
-                                    <input className={`change ${styles.change1}`} placeholder="Nam" contenteditable="true" datatype="select" />
+                                    <input className={`change ${styles.change1}`} placeholder="0368604656" contenteditable="true" datatype="select" />
                                 </p>
                                 <p className={`${styles.changeline}`}>
                                     <b>Địa chỉ</b>
-                                    <input className={`change ${styles.change1}`} placeholder="Nam" contenteditable="true" datatype="select" />
+                                    <input className={`change ${styles.change1}`} placeholder="63/1/33 Trần Quốc Vượng" contenteditable="true" datatype="select" />
                                 </p>
                             </div>
                         </div>
@@ -110,9 +110,10 @@ class CVMaker extends React.Component {
                                 <span className={`${styles.line}`}></span>
                                 <h3>KINH NGHIỆM</h3>
                             </div>
-                            <div className={`${styles.CVMaker__left__info__job}`}>
+                            {/* <div className={`${styles.CVMaker__left__info__job}`}>
                                 <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
-                            </div>
+                            </div> */}
+                            <Experience name =""/>
                         </div>
                         <div className={`box ${styles.CVMaker__left__like}`}>
                         <div className={`icon ${styles.icon}`}>
@@ -123,9 +124,7 @@ class CVMaker extends React.Component {
                                 <span className={`${styles.line}`}></span>
                                 <h3>HỌC VẤN</h3>
                             </div>
-                            <div className={`${styles.CVMaker__left__info__job}`}>
-                                <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
-                            </div>
+                            <Education />
                         </div>
                         <div className={`box ${styles.CVMaker__left__like}`}>
                         <div className={`icon ${styles.icon}`}>
@@ -140,6 +139,7 @@ class CVMaker extends React.Component {
                                 <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
                             </div>
                         </div>
+
                         <div className={`box ${styles.CVMaker__left__like}`}>
                         <div className={`icon ${styles.icon}`}>
                         <i className="fas fa-headphones-alt"></i>
@@ -149,13 +149,42 @@ class CVMaker extends React.Component {
                                 <span className={`${styles.line}`}></span>
                                 <h3>TIẾNG ANH</h3>
                             </div>
-                            <div className={`${styles.CVMaker__left__info__job}`} >
+                            {/* <div className={`${styles.CVMaker__left__info__job}`} >
                                 <input  type="text" 
                                         name="name"
                                 className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
+                            </div> */}
+                            <Education />
+                        </div>
+                    </div>
+                </div>
+                <div className={styles.sideBar}>
+                    <div className={styles.sideBar__templates}>
+                        <h3>TemPlates</h3>
+                        <div className={styles.templates_list}>
+                            <div className={styles.templates_item}>
+                                <div className={styles.template}>
+                                    <img className={styles.tempalte_img} src="https://cdn.timviecnhanh.com/asset/home/img/cv_pattern/cv2_black_new.png" height="160px" />
+                                </div>
+                            </div>
+                            <div className={styles.templates_item}>
+                                <div className={styles.template}>
+                                    <img className={styles.tempalte_img} src="https://cdn.timviecnhanh.com/asset/home/img/cv_pattern/cv6_black.png" height="160px" />
+                                </div>
+                            </div>
+                            <div className={styles.templates_item}>
+                                <div className={styles.template}>
+                                    <img className={styles.tempalte_img} src="https://cdn.timviecnhanh.com/asset/home/img/cv_pattern/cv8_violet.png" height="160px" />
+                                </div>
+                            </div>
+                            <div className={styles.templates_item}>
+                                <div className={styles.template}>
+                                    <img className={styles.tempalte_img} src="https://cdn.timviecnhanh.com/asset/home/img/cv_pattern/cv2_black_new.png" height="160px" />
+                                </div>
                             </div>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         )
