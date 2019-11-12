@@ -1,6 +1,7 @@
 import React from 'react';
 import Education from '../Test/Education';
 import Experience from './../Test/Experience'
+
 import styles from './CvMaker.scss';
 class CVMaker extends React.Component {
 
@@ -8,7 +9,7 @@ class CVMaker extends React.Component {
  
     render() {
         return (
-            <div className={`container ${styles.container}`}>
+            <div className={` ${styles.container}`}>
                 <div className={`row ${styles.CvMaker}`}>
                     <div className={`${styles.CvMaker__left}`}>
                         <div className={`${styles.CVMaker__left__avatar}`}>
