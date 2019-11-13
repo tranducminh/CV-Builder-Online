@@ -1,7 +1,10 @@
 .container {
-    background-color:#f0f0f0;
-    box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
-    position: relative;
+    // background-color:#f0f0f0;
+    // box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    // position: relative;
+    
+    padding: 38px;
+    margin: 20px 280px 0 0;
     h3 {
         display: inline-block;
         background: #fff;
@@ -105,9 +108,15 @@
     }
 
     .CvMaker {
-        width: 100%;
-        margin: 20px 320px 20px 0px;
-         background-color: #fff;
+        // width: 100%;
+        // margin: 20px 320px 20px 0px;
+        // background-color: #fff;
+        max-width: 940px;
+        min-height: 1404px;
+        margin: 0 auto;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: white;
          
         .CvMaker__left {
             // background-color: #ff4242;
@@ -174,12 +183,19 @@
     width: 120px;
 }
 .sideBar {
-    margin: 20px 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #222;
+    // margin: 20px 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // background: #222;
+    // width: 280px;
     width: 280px;
+    top: 75px;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    background: #222;
+    z-index: 9999999;
     
     .sideBar__templates {
         > h3 {

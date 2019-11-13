@@ -9,7 +9,7 @@ class CVMaker extends React.Component {
  
     render() {
         return (
-            <div className={` container ${styles.container}`}>
+            <div className={`  ${styles.container}`}>
                 <div className={`row ${styles.CvMaker}`}>
                     <div className={`${styles.CvMaker__left}`}>
                         <div className={`${styles.CVMaker__left__avatar}`}>

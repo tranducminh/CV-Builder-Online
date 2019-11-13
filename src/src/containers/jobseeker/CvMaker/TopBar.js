@@ -12,7 +12,7 @@ class TopBar extends React.Component {
                 <Logo  height ="2em"/>
                 </a>
                 <ul className={styles.topbar_menu}>
-                    <li className={styles.topbar_select}>
+                    <li className={`fas fa-file-alt ${styles.topbar_select}`}>
                         <a href="/cv/">My resumes</a>
                     </li>
                 </ul>
