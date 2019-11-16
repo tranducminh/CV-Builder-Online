@@ -20,6 +20,7 @@ class Homepage extends React.Component {
                     <TopBar />
                     <NavBar /> 
                 </div>
+                <CvMaker1 />
                 <CvMaker />
 
                 </React.Fragment>

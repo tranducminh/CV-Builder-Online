@@ -111,9 +111,11 @@
         // width: 100%;
         // margin: 20px 320px 20px 0px;
         // background-color: #fff;
+        
         max-width: 940px;
         min-height: 1404px;
         margin: 0 auto;
+        margin-top: 110px;
         box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
         position: relative;
         background-color: white;
@@ -192,10 +194,11 @@
     width: 280px;
     top: 75px;
     right: 0;
-    bottom: 0;
+    // bottom: 0;
     position: fixed;
     background: #222;
     z-index: 9999999;
+    // height: auto;
     
     .sideBar__templates {
         > h3 {

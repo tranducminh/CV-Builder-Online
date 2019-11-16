@@ -13,7 +13,7 @@ span {
     font-family: sans-serif;
 }
 :global(.add) {
-    background-color: #1dce79;
+    background-color: #1d99df;
 }
 :global(.del) {
     background-color: #f15c4c;
@@ -24,6 +24,9 @@ span {
     text-align: center;
     border-radius: 3px;
     outline: none;
+    overflow: hidden;
+    resize: none;
+    overflow-wrap: break-word;
     
 
     &:hover {
@@ -41,6 +44,8 @@ span {
     margin-bottom: 5px;
     white-space: pre-wrap;
     outline: none;
+    overflow: hidden;
+    resize: horizontal;
 
     &:hover {
         border: 1px dashed #3b576d ;

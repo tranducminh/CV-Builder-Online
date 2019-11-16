@@ -64,16 +64,16 @@ class Experience extends React.Component {
                     <div className={`row ${styles.row}`}>
 
                         <div className={` col-md-3  ${styles.row1__time}`}>
-                            <input className={`${styles.input1}`} name="time" contentEditable="true" placeholder={item.time} onChange={this.onChange} />-
-                            <input className={`${styles.input1}`} name="time1" contentEditable="true" placeholder={item.time1} onChange={this.onChange} />
+                            <textarea className={`${styles.input1}`} name="time" contentEditable="true" placeholder={item.time} onChange={this.onChange} />-
+                            <textarea className={`${styles.input1}`} name="time1" contentEditable="true" placeholder={item.time1} onChange={this.onChange} />
 
                         </div>
                         <div className={`col-md-9  ${styles.row1__info}`}>
-                            <input className={`${styles.input2}`} name="info" contentEditable="true" placeholder={item.info} onChange={this.onChange} />
+                            <textarea className={`${styles.input2}`} name="info" contentEditable="true" placeholder={item.info} onChange={this.onChange} />
                             <span>Mô tả công việc</span>
-                            <input className={`${styles.input2}`} name="info1" contentEditable="true" placeholder={item.info1} onChange={this.onChange} />
+                            <textarea className={`${styles.input2}`} name="info1" contentEditable="true" placeholder={item.info1} onChange={this.onChange} />
                             <span>Thành tích đạt được</span>
-                            <input className={`${styles.input2}`} name="info2" contentEditable="true" placeholder={item.info2} onChange={this.onChange} />
+                            <textarea className={`${styles.input2}`} name="info2" contentEditable="true" placeholder={item.info2} onChange={this.onChange} />
                         </div>
                         <div className={styles.block_actions}>
                             <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
@@ -84,7 +84,7 @@ class Experience extends React.Component {
                 ))}
                 
 
-                {/* <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button> */}
+                <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button>
 
             </div>
         )
