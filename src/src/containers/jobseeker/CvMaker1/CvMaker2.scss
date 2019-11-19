@@ -1,0 +1,84 @@
+.container {
+    font-family: monospace;
+    padding: 38px;
+    margin: 20px 280px 0 0;
+    display: inline-block;
+    .row {
+        display: inline-block;
+        max-width: 940px;
+        min-height: 1404px;
+        margin: 0 auto;
+        margin-top: 110px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: white;
+        // padding: 50px;
+        .row1 {
+            padding: 50px;
+            height: 260px;
+            position: relative;
+        .row_left {
+            width: 35%;
+
+            // border: 1px solid black;
+            // padding: 20px 12px;
+            float: left;
+            .bg_avt {
+                margin-top: 50px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                
+
+                 &:hover .btnChange{
+                    opacity: 1;
+                }
+                .avt_img {
+                    box-shadow: 0 0 40px 0 #999;
+                    width: 180px;
+                    height: 180px;
+                    // background-size: cover;
+                    border: 2px solid black;
+                   object-fit: cover;
+                    
+                
+                    
+                }
+                .btnChange {
+                    position: absolute;
+                     text-align: center;
+                    background: rgba(0, 0, 0, .6);
+                    color: #ffffff;
+                    line-height: 34px;
+                    width: 150px;
+                    bottom: 43px;
+                    font-size: 13px;
+                    opacity: 0;
+                        
+                    i{
+                        font-size: 14px !important;
+                        padding-right: 3px;
+                        }
+                    
+                    }
+                }
+            }
+            .row_right {
+                position: relative;
+                width: 65%;
+                float: right;
+            }
+        }
+        .row2 {
+            .row_left {
+                width: 35%;
+                float: left;
+            }
+            .row_right {
+                width: 60%;
+                float: right;
+            }
+        }
+    
+    }
+}

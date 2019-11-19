@@ -32,6 +32,7 @@ b {
 }
 i{
     font-size: 22px;
+    
 }
 .line {
     position: absolute;
@@ -159,7 +160,9 @@ i{
     font-family: monospace;
     padding: 38px;
     margin: 20px 280px 0 0;
+    display: inline-block;
     .row {
+        display: inline-block;
         max-width: 940px;
         min-height: 1404px;
         margin: 0 auto;

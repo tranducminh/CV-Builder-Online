@@ -5,7 +5,8 @@ import BeautyStars from 'beauty-stars';
 export default class App extends Component {
   state = { value: 0,
   size :'11px' ,
-  activeColor: '#1d99df'};
+  activeColor: '#1d99df',
+  maxStars: 10,};
   
   render() {
     return (
@@ -13,6 +14,7 @@ export default class App extends Component {
         <BeautyStars
           size = {this.state.size}
           value={this.state.value}
+          // maxStars = {this.state.maxStars}
           activeColor ={this.state.activeColor}
           onChange={value => this.setState({ value })}
           

@@ -3,7 +3,7 @@ import avt from './../../../assets/image/avt.png';
 import Education from '../Test/Education';
 import Experience from './../Test/Experience'
 import HocVan from './../Test/HocVan'
-import styles from './CvMaker1.scss';
+import styles from './CvMaker2.scss';
 import A from './Star';
 class CVMaker1 extends React.Component {
 
@@ -31,6 +31,11 @@ class CVMaker1 extends React.Component {
 
               <h4 contentEditable="true" placeholder="Nguyễn Tiến Toàn">Nguyễn Tiến Toàn</h4>
               <textarea className={` ${styles.change2}`} name="info" contentEditable="true" placeholder="Nhập mục tiêu nghề nghiệp" onChange={this.onChange} />
+              <div className={styles.contact}>
+                  <ul className={styles.contactItems}>
+                      <li className></li>
+                  </ul>
+              </div>
             </div>
           </div>
           {/* <A /> */}
