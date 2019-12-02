@@ -7,10 +7,11 @@ import CvMaker from './../CvMaker/CvMaker';
 // import Test from './../Test/Test';
 import TopBar from './../CvMaker/TopBar'
 import NavBar from './../CvMaker/NavBar'
-import CvMaker1 from './../CvMaker1/CvMaker1'
+import CvMaker1 from './../CvMaker1/CvMaker1';
 import CvMaker2 from './../CvMaker1/CvMaker2'
 import HomePage1 from './../HomePage1/HomePage1'
 import HomePage2 from './../HomePage2/HomePage2'
+import Footer from './../../Footer/Footer'
 class Homepage extends React.Component {
 
     render(){
@@ -21,9 +22,9 @@ class Homepage extends React.Component {
                     <TopBar />
                     <NavBar /> 
                 </div>
-                <CvMaker2 />
-                {/* <CvMaker /> */}
-
+                <CvMaker1 />
+                <CvMaker />
+                <Footer />
                 </React.Fragment>
         )
     }
