@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Homepage from '../Homepage/Homepage';
+import Homepage from '../CvMaker/CvMaker';
 import Login from './../../Login/Login';
 import Menu from '../Menu/Menu';
 import SubMenu from '../subMenu/SubMenu'
