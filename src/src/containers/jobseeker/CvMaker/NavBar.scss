@@ -1,0 +1,36 @@
+.navbar {
+    padding: 0 30px;
+    margin: 0;
+    height: 80px;
+    line-height: 80px;
+    background: #fff;
+    border-bottom: 1px solid #d3d8dd;
+    border: 0;
+    color: #fff;
+    .navbar_edit {
+        margin-right: 260px;
+        .form {
+              float: right;
+            
+            .btn__cancel {
+                background: black;
+            }
+            .btn__save {
+                background: #1d99df;
+            }
+        }
+    }
+}
+:global(.btn) {
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+    &:hover {
+        cursor: pointer;
+    }
+}

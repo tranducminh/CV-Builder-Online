@@ -1,0 +1,34 @@
+.container{
+    position: relative;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    color: white;
+    justify-content: center;
+    .icon{
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    :global(span) {
+
+        font-weight: 700;
+    }
+    :global(.search) {
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box;
+        padding: 0.5em;
+
+        border-radius: 2px; 
+        border: none;
+        box-shadow: none;
+        line-height: 24px;
+        font-weight: 400;
+        font-size: 15px;
+        height: 44px;
+        background-color: #1d99ff;
+        &:hover{
+            cursor: pointer;
+        }
+    }
+}

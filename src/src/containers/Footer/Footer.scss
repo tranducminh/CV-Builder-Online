@@ -1,0 +1,165 @@
+*{
+    box-sizing: border-box;
+}
+.footer{
+    width: 100%;
+    background-color: rgb(12, 35, 54);
+    .container{
+        width: 100%;
+        height: 85%;
+        padding: 50px 30px 0px 30px;
+        
+        .footer_container{
+            width: 100%;
+            max-width: 1170px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            padding-bottom: 10px;
+            .box_left{
+                float: initial;
+                margin: 0px 48px 20px 0px;
+                color: rgb(255, 255, 255);
+                width: 100%;
+                div{
+                    span{
+                        font-size: 15px;
+                        color: #7b9bbf;
+                    }
+                }
+            }
+            .box_content{
+                display: flex;
+                width: 100%;
+                color: white;
+                a{
+                    display: block;
+                    margin-bottom: 15px;
+                    color: #7b9bbf;
+                    font-size: 14px;
+                    &:hover{
+                        color: white;
+                        cursor: pointer;
+                    }
+                }
+                h5{
+                    margin-bottom: 15px;
+                }
+                .partner{
+                    width: 50%;
+                }
+                .contact_us{
+                    span{
+                        color:  #7b9bbf;
+                        display: block;
+                        margin-bottom: 15px;
+                    }
+                    a{
+                        width: 25px;
+                        height: 25px;
+                        margin: 0px 10px 15px 0px;
+                        border:1px solid  #7b9bbf;
+                        border-radius: 20px;
+                        display: inline-block;
+                        text-align: center;
+                        &:hover{
+                            color:white;
+                            border:1px solid white;
+                            transform:scale(1.3);
+                            cursor: pointer;
+                        }
+                    }
+
+                }
+            }
+            .box_right{
+                width: 100%;
+                color: white;
+                h5{
+                    margin-bottom: 30px;
+                }
+                div{
+                    position: relative;
+                    input {
+                        width: 100%;
+                        box-sizing: border-box;
+                        background: #fff;
+                        color: #646464;
+                        min-height: 47px;
+                        border-radius: 2px;
+                        padding-left: 30px;
+                        font-size: 13px;
+                        font-family: 'Raleway', sans-serif;
+                        padding-right: 140px;
+                        border-radius: 50px;
+                    }
+                    button {
+                        min-height: 40px;
+                        border: none;
+                        background: #1d99ff;
+                        color: #fff;
+                        padding: 10px 30px 10px;
+                        border-radius: 2px;
+                        font-weight: 600;
+                        font-size: 13px;
+                        border-radius: 50px;
+                        position: absolute;
+                        top: 4px;
+                        right: 3px;
+                    }
+                    
+                }
+                
+            }
+        }
+    }
+    .copyright{
+        background-color: #f1f1f1;
+        display: flex;
+        flex-direction: column;
+        padding-top: 10px;
+        .copyright_content{
+            width: 100%;
+            text-align: center;
+        }
+        .quick_menu{
+            width: 100%;
+            text-align: center;
+            a{
+                margin-right: 10px;
+                color: rgb(31, 87, 65);
+                &:hover{
+                    color: black;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+@media screen and (min-width: 1025px){
+    .footer{
+        .container{
+            .footer_container{
+                flex-direction: row;
+                .box_left{
+                    width: 25%;
+                }
+                .box_content{
+                    width: 45%;
+                }
+                .box_right{
+                    width: 30%;
+                }
+            }
+        }
+            .copyright{
+                flex-direction: row;
+                .copyright_content{
+                    width: 70%;
+                }
+                .quick_menu{
+                    width: 30%;
+                }
+            }
+    }
+}

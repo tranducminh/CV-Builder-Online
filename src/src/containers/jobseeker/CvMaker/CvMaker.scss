@@ -1,0 +1,232 @@
+.container {
+    // background-color:#f0f0f0;
+    // box-shadow: 0 0 30px 0 rgba(0, 0, 0, 0.1);
+    // position: relative;
+    
+    padding: 38px;
+    margin: 20px 280px 0 0;
+    h3 {
+        display: inline-block;
+        background: #fff;
+        position: relative;
+        margin: 0;
+        font-size: 24px;
+        font-weight: 500;
+        text-transform: uppercase;
+        z-index: 9998;
+    }
+    .line {
+        position: absolute;
+        top: 50%;
+        margin-top: 1px;
+        height: 1px;
+        background: #000;
+        width: 100%;
+        left: 0;
+    }
+    b {
+        width: 25%;
+        font-size: 14px;
+        float: left;
+        text-align: left;
+
+    }
+    i{
+        width: 44px;
+        height: 44px;
+        text-align: center;
+        line-height: 44px;
+        background: #000;
+        color: #fff;
+        margin-bottom: 7px;
+        font-size: 22px;
+        border-radius: 50px;
+    }
+    .change1 {
+        cursor: text;
+        padding: 2px;
+        display: inline-block;
+        width: 70%;
+        border: 1px dashed #b5bfc7 ;
+        outline: none;
+        font-size: 14px;
+        border-radius: 3px;
+
+
+        &:hover {
+            border: 1px dashed #3b576d ;
+            border-radius: 3px;
+        }
+        
+    }
+    .change {
+        text-transform: uppercase;
+        cursor: text;
+        padding: 2px;
+        display: inline-block;
+        width: 99%;
+        border: 1px dashed #b5bfc7 ;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: center;
+        outline: none;
+        border-radius: 3px;
+        // background-color: #ff4242;
+        
+
+        &:hover {
+            border: 1px dashed #3b576d ;
+            border-radius: 3px;
+        }
+        
+    }
+    .change2 {
+        cursor: text;
+        padding: 2px;
+        display: inline-block;
+        width: 99%;
+        border: 1px dashed #b5bfc7 ;
+        outline: none;
+        font-size: 14px;
+        font-weight: 500;
+        text-align: left;
+        border-radius: 3px;
+
+        &:hover {
+            border: 1px dashed #3b576d ;
+            border-radius: 3px; 
+        }
+        
+    }
+    :global(.box){
+        text-align: center;
+        margin-top: 30px;
+    }
+    :global(.nameBox){
+        display: block;
+        margin-bottom: 15px;
+        position: relative;
+    }
+
+    .CvMaker {
+        // width: 100%;
+        // margin: 20px 320px 20px 0px;
+        // background-color: #fff;
+        
+        max-width: 940px;
+        min-height: 1404px;
+        margin: 0 auto;
+        margin-top: 110px;
+        box-shadow: 0 0 25px 0 rgba(0, 0, 0, 0.1);
+        position: relative;
+        background-color: white;
+         
+        .CvMaker__left {
+            // background-color: #ff4242;
+            width: 40%;
+            border: 1px solid black;
+            padding: 20px 12px;
+            //  margin: 20px 0;
+            float: left;
+            // color: ;
+            
+            
+
+            .CVMaker__left__avatar {
+                width: 116px;
+                margin: auto;
+                margin-bottom: 15px;
+                display: block;
+                cursor: pointer;
+                position: relative;
+                
+                &:hover .btnChange{
+                    opacity: 1;
+                }
+                img {
+                    width: 120px;
+                    height: 120px;
+                    margin: 0 auto;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+                .btnChange {
+                    position: absolute;
+                    text-align: center;
+                    background: rgba(0, 0, 0, .6);
+                    color: #ffffff;
+                    line-height: 34px;
+                    width: 120px;
+                    bottom: 43px;
+                    font-size: 13px;
+                    opacity: 0;
+                    
+                    i{
+                        font-size: 14px !important;
+                        padding-right: 3px;
+                    }
+                }
+            }
+            .CVMaker__left__info {
+                text-align: center;
+            }
+        }
+        .CvMaker__right {
+            background-color: white;
+            width: 60%;
+            border: 1px solid black;
+            border-left: none;
+            padding: 20px 12px;
+            // margin: 20px 0;
+        }
+    }
+}
+.tempalte_img {
+    height: 166px;
+    width: 120px;
+}
+.sideBar {
+    // margin: 20px 0;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // background: #222;
+    // width: 280px;
+    width: 280px;
+    top: 75px;
+    right: 0;
+    // bottom: 0;
+    position: fixed;
+    background: #222;
+    z-index: 9999999;
+    // height: auto;
+    
+    .sideBar__templates {
+        > h3 {
+            width: 100%;
+            top: 0;
+            margin: 0;
+            padding: 0 15px;
+            position: absolute;
+            line-height: 36px;
+            color: #e2e2e2;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: normal;
+            background-color: #1a1a1a;
+        }
+        height: 50%;
+        position: relative;
+        padding: 36px 0 0 0;
+        .templates_list {
+            .templates_item {
+                cursor: pointer;
+                margin-left: 9px;
+                float: left;
+                margin-bottom: 10px;
+                border: 1px solid #222;
+                padding: 4px;
+            }
+        }
+    }
+}

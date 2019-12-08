@@ -1,0 +1,56 @@
+
+// @font-face {
+//     font-family: "CentraNo2";
+//     src: url("./../../../assets/font//CentraNo2-Book.otf");
+//   }
+.hero {
+    background: url(./../../../assets/image/bg.png) bottom;
+    background-repeat: no-repeat;
+    background-size: 1480px 536px;
+    text-align: center;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+
+    h1 {
+        font-size: 32px !important;
+        font-weight: bold;
+    }
+
+    .row {
+        width: 100%;
+    }
+    :global(.btn) {
+        border: none;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 10px 20px;
+        color: #fff;
+        border-radius: 5px;
+        text-decoration: none;
+        margin-right: 10px;
+    }
+    .header {
+        color: #aabcce;
+        font-size: 14px;
+        padding: 10px 0;
+        
+
+            .float__right {
+                margin-top: 20px;
+
+                .btn__register  {
+                    background: #1d99df;
+                    
+                }
+                .btn__login {
+                    background: black;
+                    
+                }
+            
+        }
+        
+    }
+    .btn__build {
+        background: #1d99df;
+    }
+}

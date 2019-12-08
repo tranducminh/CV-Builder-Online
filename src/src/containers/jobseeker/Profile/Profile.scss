@@ -1,0 +1,65 @@
+.Container {
+    margin-bottom: 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    box-sizing: border-box;  
+}
+.Main {
+    background-color: #f0f0f0;
+}
+:global(.Cover) {
+    position: relative;
+    width: 100%;
+    >img {
+        min-height: 150px;
+        min-width: 150px;
+        width: 100%;
+        max-width: 100%;
+        display: inline-block;
+        
+    }
+    
+}
+.profile__img {
+    position: relative;
+    width: 100%;
+    >img {
+        width: 150px;
+        margin-bottom: 15px;
+        border-radius: 3px;
+        
+    }
+
+}
+:global(.edit__btn) {
+    display: block;
+    border: 1px solid gray;
+    padding: 4px 8px;
+    font-size: 14px;
+    line-height: 1.5;
+    border-radius: 3px;
+    width: 150px;
+    text-align: center;
+    &:hover {
+        background-color: #1a8a58;
+        color: white;
+    }
+}
+:global(.profileBg) {
+    transform: translate(5%, -50%);
+}
+:global(.profile-Header) {
+    display: flex;
+}
+:global(.About) {
+    margin-top: -50px ;
+    background-color: #f0f0f0;
+}
+:global(.AboutInfo) {
+    padding: 10px 15px;
+
+    box-sizing: border-box;
+}
+:global(.col-md-8) {
+    background-color: #fff;
+}

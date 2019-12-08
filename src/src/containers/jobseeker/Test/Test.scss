@@ -1,0 +1,83 @@
+.row {
+    border: 1px solid #e6eaec;
+    padding-top: 20px ;
+    margin: 0 0 15px 0 !important;
+    margin-bottom: 10px;
+    position: relative;
+    p {
+        width: 100%;
+        b {
+            width: 15%;
+        }
+
+    }
+}
+span {
+    font-size: 14px;
+    color: #363636;
+    font-weight: bold;
+    float: left;
+    font-family: sans-serif;
+}
+:global(.add) {
+    background-color: #1d99df;
+}
+:global(.del) {
+    background-color: #f15c4c;
+}
+.input1 {
+    width: 100%;
+    border: 1px dashed #b5bfc7 ;
+    text-align: center;
+    border-radius: 3px;
+    outline: none;
+    overflow: hidden;
+    resize: none;
+    overflow-wrap: break-word;
+    
+
+    &:hover {
+        border: 1px dashed #3b576d ;
+        border-radius: 3px;
+    }
+}
+.input2 {
+    width: 100%;
+    border: none;
+    text-align: left;
+    padding: 0 4px;
+    border: 1px dashed #b5bfc7 ;
+    border-radius: 3px;
+    margin-bottom: 5px;
+    white-space: pre-wrap;
+    outline: none;
+    overflow: hidden;
+    resize: horizontal;
+
+    &:hover {
+        border: 1px dashed #3b576d ;
+        border-radius: 3px;
+    }
+}
+
+.block_actions {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    .actions {
+        border: 0;
+        border-bottom-left-radius: 3px;
+        border-bottom-right-radius: 3px;
+        margin-right: 5px;
+        float: left;
+        color: #fff;
+        font-size: 13px;
+        font-weight: 700;
+        line-height: 25px;
+        padding: 0 6px;
+        outline: none;
+        
+
+    }
+}
