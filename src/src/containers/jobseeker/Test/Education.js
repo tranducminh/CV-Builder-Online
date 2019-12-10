@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './Test.scss';
-import A from './../CvMaker1/Star'
+import A from './../CvMaker1/Star';
+import Vote from './../../../components/UI/Vote/Vote'
 
 class Education extends React.Component {
     
@@ -69,10 +70,11 @@ class Education extends React.Component {
                 {this.state.data.map((item, index) => (
                     <div className={`row ${styles.row}`}>
 
-                    <p className={`${styles.changeline}`}>
+                    {/* <p className={`${styles.changeline}`}>
                     <b>Nghe</b>
                     <A/>
-                  </p>
+                  </p> */}
+                  <Vote />
                   <p className={`${styles.changeline}`}>
                     <b>Nói</b>
                     <A />

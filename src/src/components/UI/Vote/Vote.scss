@@ -1,0 +1,40 @@
+.voteRow {
+    width: 100%;
+    border: 1px solid #fff;
+    .vote {
+        width: 100%;
+        .dataName {
+            width: 15%;
+            float: left;
+        }
+        .block_actions {
+            position: relative;
+            top: -30px;
+            right: -125px;
+            display: none;
+            .delAction {
+                background-color: #f15c4c;
+                border: 0;
+                border-bottom-left-radius: 3px;
+                border-bottom-right-radius: 3px;
+                margin-right: 5px;
+                float: left;
+                color: #fff;
+                font-size: 13px;
+                font-weight: 700;
+                line-height: 25px;
+                padding: 0 6px;
+                outline: none;
+                
+        
+            }
+        }
+    }
+    &:hover {
+        border: 1px solid #e6eaec;
+        .block_actions {
+            display: block;
+        }
+    }
+    
+}
