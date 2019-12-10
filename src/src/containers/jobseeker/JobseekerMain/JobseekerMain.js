@@ -4,6 +4,7 @@ import Homepage from '../HomePage1/HomePage1';
 import CV1 from '../CvMaker/CvMaker';
 import CV2 from '../CvMaker1/CvMaker1';
 import Login from './../../Login/Login';
+import SignUp from './../../SignUp/SignUp';
 import Menu from '../Menu/Menu';
 import Footer from './../../Footer/Footer';
 import NotFoundPage from '../../NotFoundPage/NotFoundPage';
@@ -24,9 +25,10 @@ class JobseekerMain extends React.Component {
                     <Route path='/cv1' component={CV1} />
                     <Route path='/cv2' component={CV2} />
                     <Route path={process.env.REACT_APP_PATH_LOGIN} component={Login} />
+                    <Route path={process.env.REACT_APP_PATH_SIGNUP} component={SignUp} />
                     <Route component={NotFoundPage} />
                 </Switch>
-                <Footer/>
+                {/* <Footer/> */}
                 </React.Fragment>
         )
     }
