@@ -1,10 +1,12 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom'
-import Homepage from '../CvMaker/CvMaker';
+import Homepage from '../HomePage1/HomePage1';
+import CV1 from '../CvMaker/CvMaker';
+import CV2 from '../CvMaker1/CvMaker1';
 import Login from './../../Login/Login';
 import Menu from '../Menu/Menu';
-import SubMenu from '../subMenu/SubMenu'
-import Footer from './../../Footer/Footer'
+import Footer from './../../Footer/Footer';
+import NotFoundPage from '../../NotFoundPage/NotFoundPage';
 
 class JobseekerMain extends React.Component {
     constructor(){
@@ -16,13 +18,15 @@ class JobseekerMain extends React.Component {
     render(){
         return(
             <React.Fragment>
-                {/* <Menu /> */}
-                {/* <SubMenu /> */}
+                <Menu />
                 <Switch>
                     <Route path='/' exact component={Homepage} />
-                    <Route path='/login' exact component={Login} />
+                    <Route path='/cv1' component={CV1} />
+                    <Route path='/cv2' component={CV2} />
+                    <Route path={process.env.REACT_APP_PATH_LOGIN} component={Login} />
+                    <Route component={NotFoundPage} />
                 </Switch>
-                {/* <Footer/> */}
+                <Footer/>
                 </React.Fragment>
         )
     }

@@ -1,11 +1,12 @@
-.Container {
-    margin-bottom: 20px;
-    border: 1px solid transparent;
-    border-radius: 4px;
-    box-sizing: border-box;  
-}
+
 .Main {
     background-color: #f0f0f0;
+    .Container {
+        margin-bottom: 20px;
+        border: 1px solid transparent;
+        border-radius: 4px;
+        box-sizing: border-box;  
+    }
 }
 :global(.Cover) {
     position: relative;

@@ -85,10 +85,6 @@ class Education extends React.Component {
                     <b>Viết</b>
                     <A />
                   </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Địa chỉ</b>
-                    <A />
-                  </p>
                         <div className={styles.block_actions}>
                             <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
                             <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>

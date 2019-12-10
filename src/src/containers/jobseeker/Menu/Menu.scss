@@ -119,3 +119,34 @@
     
 
 // }
+:global(.btn) {
+    border: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+.header {
+    color: #aabcce;
+    font-size: 14px;
+    padding: 10px 0;
+    
+
+        .float__right {
+            margin-top: 20px;
+
+            .btn__register  {
+                background: #1d99df;
+                
+            }
+            .btn__login {
+                background: black;
+                
+            }
+        
+    }
+    
+}

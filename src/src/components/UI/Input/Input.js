@@ -5,9 +5,8 @@ const input = (props) => {
 
 
   return (
-    <div className={` col-lg-6 ${styles.container}`}>
-      <i className={`fas fa-search ${styles.icon}`}></i>
-      <input {...props.elementConfig} className={` ${props.class} `}/>
+    <div className={styles.container}>
+      <input className={styles.input} placeholder={props.placeholder} name={props.name} contenteditable="true" />
     </div>
   )
 
