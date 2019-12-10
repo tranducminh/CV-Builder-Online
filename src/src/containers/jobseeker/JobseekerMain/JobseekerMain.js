@@ -5,6 +5,7 @@ import CV1 from '../CvMaker/CvMaker';
 import CV2 from '../CvMaker1/CvMaker1';
 import Login from './../../Login/Login';
 import SignUp from './../../SignUp/SignUp';
+import Profile from './../Profile/Profile';
 import Menu from '../Menu/Menu';
 import Footer from './../../Footer/Footer';
 import NotFoundPage from '../../NotFoundPage/NotFoundPage';
@@ -26,6 +27,7 @@ class JobseekerMain extends React.Component {
                     <Route path='/cv2' component={CV2} />
                     <Route path={process.env.REACT_APP_PATH_LOGIN} component={Login} />
                     <Route path={process.env.REACT_APP_PATH_SIGNUP} component={SignUp} />
+                    <Route path={process.env.REACT_APP_PATH_PROFILE} component={Profile} />
                     <Route component={NotFoundPage} />
                 </Switch>
                 {/* <Footer/> */}

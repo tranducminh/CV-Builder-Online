@@ -1,42 +1,61 @@
 import React from 'react';
 import styles from './Profile.scss';
+import avt from './../../../assets/image/avt.png';
 
 class Profile extends React.Component {
     render() {
         return (
             <React.Fragment>
                 <div className={`profileMain ${styles.Main}`}>
-                    <div className={`container ${styles.Container}`}>
-                        <div className={`row`}>
-                            <div className={`col-md-8`}>
-                                <div className="Cover">
-                                    <img className="img-responsive" src="https://www.topcv.vn/images/profile_default_cover.jpg" />
-                                </div>
-                                <div className="profileBg">
-                                    <div className="profile-Header">
-                                        <div className={`col-sm-5 ${styles.profile__img}`}>
-                                            <img src="https://images.unsplash.com/photo-1522075469751-3a6694fb2f61?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=80" />
-                                            <div className="edit__btn">Edit Profile</div>
-                                        </div>
-                                        <div className={`col-sm-7 ${styles.profile__name}`}>
-                                            <div><h4>Nguyễn Tiến Toàn</h4></div>
-                                            <div><h5>Hà Nội</h5></div>
-                                        </div>
+                    <div className={`container ${styles.wrapper}`}>
+                        <div className={styles.left}>
+                            <img src={avt} alt="user"  />
+                            <h4>Nguyễn Tiến Toàn</h4>
+                            <p>UI Developer</p>
+                        </div>
+                        <div className={styles.right}>
+                            <div className={styles.info}>
+                                <h3>Information</h3>
+                                <div className={styles.info_data}>
+                                    <div className={styles.data}>
+                                        <h4>Email</h4>
+                                        <p>toanleaderuet@gmail.com</p>
                                     </div>
-                                </div>
-
-                                <div className="profileInfo"></div>
-                                <div className={` About `}>
-                                    <div className="AboutInfo">
-                                        <h5>About</h5>
-                                        <div className="About__info">
-                                            <p>Student</p>
-                                            <p>Single</p>
-                                            <p>Web Developer</p>
-                                        </div>
+                                    <div className={styles.data}>
+                                        <h4>Phone</h4>
+                                        <p>0368604656</p>
                                     </div>
                                 </div>
                             </div>
+                            <div className={styles.projects}>
+                                <h3>Projects</h3>
+                                <div className={styles.projects_data}>
+                                    <div className={styles.data}>
+                                        <h4>Recent</h4>
+                                        <p>Nothing</p>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+                            <div className={styles.rfPassword}>
+                                <h3>Reset Password</h3>
+                                <label>Current Password</label>
+                                <div className={styles.passwordForm}>
+                                    <input type="password" id="password" name="_password" className={styles.password} />
+                                </div>
+                                <label>Password</label>
+                                <div className={styles.passwordForm}>
+                                    <input type="password" id="password" name="_password" className={styles.password} />
+                                </div>
+                                <label>Repeat Password</label>
+                                <div className={styles.passwordForm}>
+                                    <input type="password" id="password" name="_password" className={styles.password} />
+                                </div>
+                                <a >
+                                    <button type="submit" >Update</button>
+                                </a>
+                            </div>
+
                         </div>
                     </div>
                 </div>
