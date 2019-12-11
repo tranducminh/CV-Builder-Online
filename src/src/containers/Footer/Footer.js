@@ -6,7 +6,7 @@ import styles from './Footer.scss'
 class Footer extends React.Component{
     render() {
         return(
-            <div className={`${styles.footer}`}>a1aaaaa
+            <div className={`${styles.footer}`}>
                 <div className={`container ${styles.container}`}>
                 <div className={`${styles.footer_container}`}>
                     <div className={`${styles.box_left}`}>

@@ -1,11 +1,26 @@
+.feature {
+    background-color: #fff;
+}
 .container {
     width: 100%;
+    // background-color: #fff;
+    .row1 {
+        display: flex;
+        margin-top: 20px;
+        margin-bottom: 40px;
+    }
+    .row2 {
+        margin-top: 20px;
+        margin-bottom: 40px;
+        display: flex;
+        
+    }
     .feature_info{
         text-align: left;
         padding: 2em;
     }
 }
-.img {
-    width: auto;
-    height: auto;
+.imgHomePage {
+    width: 415px;
+    height: 236px;
 }

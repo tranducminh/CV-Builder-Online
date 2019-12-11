@@ -6,8 +6,10 @@ import CV2 from '../CvMaker1/CvMaker1';
 import Login from './../../Login/Login';
 import SignUp from './../../SignUp/SignUp';
 import Profile from './../Profile/Profile';
+import CVBuild from './../CVbuild/CVbulid';
 import Menu from '../Menu/Menu';
 import Footer from './../../Footer/Footer';
+import styles from './JobseekerMain.scss'
 import NotFoundPage from '../../NotFoundPage/NotFoundPage';
 
 class JobseekerMain extends React.Component {
@@ -21,13 +23,14 @@ class JobseekerMain extends React.Component {
         return(
             <React.Fragment>
                 <Menu />
-                <Switch>
-                    <Route path='/' exact component={Homepage} />
+                <Switch className={styles.JobseekerMain}>
+                    <Route path='/' exact component={Homepage}  className ={styles.HomepageJob}/>
                     <Route path='/cv1' component={CV1} />
                     <Route path='/cv2' component={CV2} />
                     <Route path={process.env.REACT_APP_PATH_LOGIN} component={Login} />
-                    <Route path={process.env.REACT_APP_PATH_SIGNUP} component={SignUp} />
+                    <Route path={process.env.REACT_APP_PATH_SIGNUP} component={SignUp}/>
                     <Route path={process.env.REACT_APP_PATH_PROFILE} component={Profile} />
+                    <Route path={process.env.REACT_APP_PATH_CVCHOOSE} component={CVBuild} />
                     <Route component={NotFoundPage} />
                 </Switch>
                 {/* <Footer/> */}
