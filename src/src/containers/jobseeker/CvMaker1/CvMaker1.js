@@ -3,6 +3,10 @@ import avt from './../../../assets/image/avt.png';
 import Education from '../Test/Education';
 import ExperienceList from './../Test/ExperienceList'
 import HocVan from './../Test/HocVan'
+import Experience from './../Test/Experience'
+import HocVan from './../Test/HocVan';
+import Computer from './../Test/Computer';
+import Vote from '../../../components/UI/Vote/Vote'
 import styles from './CvMaker1.scss';
 import Input from '../../../components/UI/Input/Input';
 import InputWithTitle from '../../../components/UI/InputForm/WithTitle/Input';
@@ -63,28 +67,29 @@ class CVMaker1 extends React.Component {
                                     <span className={`${styles.line1}`}></span>
                                     <h3>TIN HỌC</h3>
                                 </div>
-                                <div className={`${styles.CVMaker__left__info__job}`}>
-                                    <p className={`${styles.changeline}`}>
-                                        <b>Word</b>
-                                        <A />
-                                    </p>
-                                    <p className={`${styles.changeline}`}>
-                                        <b>Excel</b>
-                                        <A />
-                                    </p>
-                                    <p className={`${styles.changeline}`}>
-                                        <b>Power Point</b>
-                                        <A />
-                                    </p>
-                                    <p className={`${styles.changeline}`}>
-                                        <b>Outlook</b>
-                                        <A />
-                                    </p>
-                                    <p className={`${styles.changeline}`}>
-                                        <b>Địa chỉ</b>
-                                        <A />
-                                    </p>
-                                </div>
+                                <Computer />
+                                {/* <div className={`${styles.CVMaker__left__info__job}`}>
+                  <p className={`${styles.changeline}`}>
+                    <b>Word</b>
+                    <A />
+                  </p>
+                  <p className={`${styles.changeline}`}>
+                    <b>Excel</b>
+                    <A />
+                  </p>
+                  <p className={`${styles.changeline}`}>
+                    <b>Power Point</b>
+                    <A />
+                  </p>
+                  <p className={`${styles.changeline}`}>
+                    <b>Outlook</b>
+                    <A />
+                  </p>
+                  <p className={`${styles.changeline}`}>
+                    <b>Địa chỉ</b>
+                    <A />
+                  </p>
+                </div> */}
                             </div>
                             <div className={styles.addblock}>
                                 <button >Add block</button>
@@ -107,73 +112,82 @@ class CVMaker1 extends React.Component {
                                     <i className="fas fa-briefcase"></i>
                                 </div>
 
-                                <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                    <span className={`${styles.line1}`}></span>
-                                    <h3>KINH NGHIỆM</h3>
-                                </div>
-                                <ExperienceList />
+                                
+                        </div>
+                    </div>
+                    <div className={styles.row_right}>
+                        <div className={`box ${styles.CVMaker__left__like}`}>
+                            <div className={`icon ${styles.icon}`}>
+                                <i className="fas fa-briefcase"></i>
                             </div>
-                            <div className={`box ${styles.CVMaker__left__like}`}>
-                                <div className={`icon ${styles.icon}`}>
-                                    <i className="fas fa-briefcase"></i>
-                                </div>
 
-                                <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                    <span className={`${styles.line1}`}></span>
-                                    <h3>HỌC VẤN</h3>
-                                </div>
-                                {/* <div className={`${styles.CVMaker__left__info__job}`}>
+                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
+                                <span className={`${styles.line1}`}></span>
+                                <h3>KINH NGHIỆM</h3>
+                            </div>
+                            <ExperienceList />
+                        </div>
+                        <div className={`box ${styles.CVMaker__left__like}`}>
+                            <div className={`icon ${styles.icon}`}>
+                                <i className="fas fa-briefcase"></i>
+                            </div>
+
+                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
+                                <span className={`${styles.line1}`}></span>
+                                <h3>HỌC VẤN</h3>
+                            </div>
+                            {/* <div className={`${styles.CVMaker__left__info__job}`}>
                                 <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
                             </div> */}
-                                <HocVan name="" />
-                            </div>
-                            <div className={`box ${styles.CVMaker__left__like}`}>
-                                <div className={`icon ${styles.icon}`}>
-                                    <i className="fas fa-headphones-alt"></i>
-                                </div>
-
-                                <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                    <span className={`${styles.line1}`}></span>
-                                    <h3>TIẾNG ANH</h3>
-                                </div>
-
-                                <Education />
-                            </div>
-                            <div className={styles.addblock}>
-                                <button >Add block</button>
-                                <ul className={styles.addBlockItem} onClick={this.onClick} >
-                                    <li>
-                                        <i class="fas fa-skiing"></i>
-                                        <span className={styles.title}>Skill</span>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-file-alt"></i>
-                                        <span className={styles.title}>Text</span>
-                                    </li>
-
-                                </ul>
-                            </div>
-                            <div className={styles.addblock}>
-                                <button >Add block</button>
-                                <ul className={styles.addBlockItem} onClick={this.onClick} >
-                                    <li>
-                                        <i class="fas fa-skiing"></i>
-                                        <span className={styles.title}>Skill</span>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-file-alt"></i>
-                                        <span className={styles.title}>Text</span>
-                                    </li>
-
-                                </ul>
+                            <HocVan name="" />
+                        </div>
+                        <div className={`box ${styles.CVMaker__left__like}`}>
+                            <div className={`icon ${styles.icon}`}>
+                                <i className="fas fa-headphones-alt"></i>
                             </div>
 
+                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
+                                <span className={`${styles.line1}`}></span>
+                                <h3>TIẾNG ANH</h3>
+                            </div>
+
+                            <Education />
+                        </div>
+                        <div className={styles.addblock}>
+                            <button >Add block</button>
+                            <ul className={styles.addBlockItem} onClick={this.onClick} >
+                                <li>
+                                    <i class="fas fa-skiing"></i>
+                                    <span className={styles.title}>Skill</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-alt"></i>
+                                    <span className={styles.title}>Text</span>
+                                </li>
+
+                            </ul>
+                        </div>
+                        <div className={styles.addblock}>
+                            <button >Add block</button>
+                            <ul className={styles.addBlockItem} onClick={this.onClick} >
+                                <li>
+                                    <i class="fas fa-skiing"></i>
+                                    <span className={styles.title}>Skill</span>
+                                </li>
+                                <li>
+                                    <i class="fas fa-file-alt"></i>
+                                    <span className={styles.title}>Text</span>
+                                </li>
+
+                            </ul>
                         </div>
 
                     </div>
-                </div>
 
+                </div>
             </div>
+
+            </div >
         )
     }
 }

@@ -11,6 +11,10 @@
         }
 
     }
+    .VoteRow {
+        width: 100% !important;
+        height: 100%;
+    }
 }
 span {
     font-size: 14px;
@@ -25,6 +29,7 @@ span {
 :global(.del) {
     background-color: #f15c4c;
 }
+
 .input1 {
     width: 100%;
     border: 1px dashed #b5bfc7 ;
@@ -62,7 +67,7 @@ span {
 
 .block_actions {
     position: absolute;
-    top: 0;
+    top: -35px;
     right: 0;
     display: block;
     .actions {

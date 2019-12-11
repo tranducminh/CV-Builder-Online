@@ -48,6 +48,7 @@ class Experience extends React.Component {
 
             <div className={`row ${styles.row}`}>
 
+
                 <div className={` col-md-3  ${styles.row1__time}`}>
                     <textarea className={`${styles.input1}`} name="timeStart" value={this.props.data.timeStart} onChange={this.onChange} />-
                     <textarea className={`${styles.input1}`} name="timeEnd" value={this.props.data.timeEnd} onChange={this.onChange} />
