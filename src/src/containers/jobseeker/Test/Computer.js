@@ -1,38 +1,17 @@
 import React from 'react';
 import styles from './Test.scss';
-import Vote from '../../../components/UI/Vote/Vote'
+import Vote from '../../../components/UI/Vote/Vote';
 
-class Education extends React.Component {
-
+class Computer extends React.Component {
+    
     constructor() {
         super();
         this.state = {
-            data: [
-                {
-                    id: '1',
-                    time: '4/11',
-                    time1: '7/11',
-                    info: 'Đơn Vị Đào Tạo',
-                    info1: 'Chuyên ngành',
-                    info2: 'Trình độ',
-                    info3: 'Loại tốt nghiệp'
-                },
-
-
-            ]
+            data: []
 
         }
 
-        this.initialData = {
-            time: '4/11',
-            time1: '7/11',
-            info: 'Đơn Vị Đào Tạo',
-            info1: 'Chuyên ngành',
-            info2: 'Trình độ'
-        }
-
-
-
+        this.initialData = {}
     }
     onChange = (event) => {
         let target = event.target
@@ -45,7 +24,7 @@ class Education extends React.Component {
 
     }
 
-
+    
 
 
     addInput = () => {
@@ -68,13 +47,11 @@ class Education extends React.Component {
             <div>
                 {this.state.data.map((item, index) => (
                     <div className={`row ${styles.row}`}>
-
-
-                        <Vote name="Nghe" />
-                        <Vote name="Nói"/>
-                        <Vote name="Đọc"  />
-                        <Vote name="Viết" />
-
+                  <Vote name="Nghe"/>
+                  <Vote name="Nói"/>
+                  <Vote name="Đọc"/>
+                  <Vote name="Viết"/>
+                 
                         <div className={styles.block_actions}>
                             <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
                             <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
@@ -91,4 +68,4 @@ class Education extends React.Component {
     }
 }
 
-export default Education;
+export default Computer;

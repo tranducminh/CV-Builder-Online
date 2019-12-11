@@ -2,7 +2,9 @@ import React from 'react';
 import avt from './../../../assets/image/avt.png';
 import Education from '../Test/Education';
 import Experience from './../Test/Experience'
-import HocVan from './../Test/HocVan'
+import HocVan from './../Test/HocVan';
+import Computer from './../Test/Computer';
+import Vote from '../../../components/UI/Vote/Vote'
 import styles from './CvMaker1.scss';
 import A from './Star';
 class CVMaker1 extends React.Component {
@@ -76,7 +78,8 @@ class CVMaker1 extends React.Component {
                   <span className={`${styles.line1}`}></span>
                   <h3>TIN HỌC</h3>
                 </div>
-                <div className={`${styles.CVMaker__left__info__job}`}>
+                <Computer />
+                {/* <div className={`${styles.CVMaker__left__info__job}`}>
                   <p className={`${styles.changeline}`}>
                     <b>Word</b>
                     <A />
@@ -97,7 +100,7 @@ class CVMaker1 extends React.Component {
                     <b>Địa chỉ</b>
                     <A />
                   </p>
-                </div>
+                </div> */}
               </div>
               <div className={styles.addblock}>
                 <button >Add block</button>

@@ -7,7 +7,7 @@ import Logo from './../../components/Logo/Logo'
 
 class Login extends React.Component {
 
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             email: '',
@@ -38,7 +38,7 @@ class Login extends React.Component {
     }
 
     componentDidUpdate(prevProps) {
-        if(this.props.isAuth && this.props.isAuth != prevProps.isAuth) {
+        if (this.props.isAuth && this.props.isAuth != prevProps.isAuth) {
             this.setState({
                 isAuth: this.props.isAuth
             })
@@ -48,32 +48,34 @@ class Login extends React.Component {
     render() {
         return (
             this.state.isAuth ? <Redirect to="/" /> :
-            <div className={styles.row}>
-                <div className={styles.login}>
-                    <div className={styles.block}>
-                        <div className={styles.inner}>
-                            {/* <form> */}
-                                <label>E-mail</label>
-                                <input id="username" name="email" onChange = {this.onHandleChange} />
-                                <label>Password</label>
-                                <div className={styles.passwordForm}>
-                                    <input type="password" id="password" name="password" className={styles.password} onChange = {this.onHandleChange}/>
-                                    <a href="/" className={styles.forgot}>Forgot?</a>
+                <div className={styles.LoginForm}>
+                    <div className={styles.row}>
+                        <div className={styles.login}>
+                            <div className={styles.block}>
+                                <div className={styles.inner}>
+                                    {/* <form> */}
+                                    <label>E-mail</label>
+                                    <input id="username" name="email" onChange={this.onHandleChange} className={` inputIn ${styles.inputIn}`} />
+                                    <label>Password</label>
+                                    <div className={styles.passwordForm}>
+                                        <input type="password" id="password" name="password" className={` inputIn ${styles.password}`} onChange={this.onHandleChange} />
+                                        <a href="/" className={styles.forgot}>Forgot?</a>
+                                    </div>
+                                    <button className={styles.login} id="_submit" name="_submit" onClick={this.onHandleLogin} >Log in</button>
+                                    {/* </form> */}
                                 </div>
-                                <button className={styles.login} id="_submit" name="_submit" onClick = {this.onHandleLogin} >Log in</button>
-                            {/* </form> */}
+                            </div>
+                            <div className={styles.footer}>
+
+                                Don't have an account?
+        
+                        <a href="/register/">
+                                    <button type="submit" >Sign up</button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.footer}>
-
-                        Don't have an account?
-
-                        <a href="/register/">
-                            <button type="submit" >Sign up</button>
-                        </a>
-                    </div>
                 </div>
-            </div>
 
 
         )

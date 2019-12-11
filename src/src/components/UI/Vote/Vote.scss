@@ -1,17 +1,22 @@
 .voteRow {
-    width: 100%;
-    border: 1px solid #fff;
+
+    width: 100% ;
+//  padding-bottom: 1rem;
     .vote {
         width: 100%;
+        position: relative;
         .dataName {
             width: 15%;
             float: left;
+            margin: 5px;
+            padding:5px 10px 5px 10px;
+            border-bottom: 1px solid #3b576d;
         }
         .block_actions {
-            position: relative;
-            top: -30px;
-            right: -125px;
-            display: none;
+            position: absolute;
+            top: -15px;
+            right: 0;
+            display: block;
             .delAction {
                 background-color: #f15c4c;
                 border: 0;
@@ -30,11 +35,6 @@
             }
         }
     }
-    &:hover {
-        border: 1px solid #e6eaec;
-        .block_actions {
-            display: block;
-        }
-    }
+    
     
 }

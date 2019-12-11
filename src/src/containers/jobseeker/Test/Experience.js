@@ -84,7 +84,7 @@ class Experience extends React.Component {
                 ))}
                 
 
-                <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button>
+                {/* <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button> */}
 
             </div>
         )
