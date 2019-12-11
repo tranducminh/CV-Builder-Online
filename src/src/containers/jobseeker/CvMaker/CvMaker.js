@@ -1,18 +1,33 @@
 import React from 'react';
 import Education from '../Test/Education';
 import Experience from './../Test/Experience';
+import Hocvan from './../Test/HocVan';
 import Input from '../../../components/UI/Input/Input';
 import InputWithTitle from '../../../components/UI/InputForm/WithTitle/Input';
 import styles from './CvMaker.scss';
 class CVMaker extends React.Component {
+    constructor(props){
+        super(props);
+        this.state = {
 
+        }
+    }
 
+    onHandleChange = (event) => {
+        let target = event.target;
+        let name = target.name;
+        let value = target.value;
+        this.setState({
+            [name]: value
+        })
+    }
 
     render() {
         return (
             <div className={`  ${styles.container}`}>
                 <div className={`row ${styles.CvMaker}`}>
                     <div className={`${styles.CvMaker__left}`}>
+                        {/* =================== */}
                         <div className={`${styles.CVMaker__left__avatar}`}>
                             <img src="https://cdn.timviecnhanh.com/asset/home/img/small-avatar1.png" />
                             <div className={`${styles.btnChange}`}>
@@ -20,6 +35,8 @@ class CVMaker extends React.Component {
                                 Chọn ảnh
                         </div>
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__user}`}>
 
                             <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
@@ -28,10 +45,12 @@ class CVMaker extends React.Component {
                                 {/* <Input placeholder="Nguyễn Tiến Toàn" /> */}
                             </div>
                             <div className={`${styles.CVMaker__left__info__job}`}>
-                                <Input placeholder="NHẬP TIÊU ĐỀ CV" />
+                                <Input placeholder="NHẬP TIÊU ĐỀ CV" name="title" changed = {this.onHandleChange}/>
                             </div>
 
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__info}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-mobile-alt"></i>
@@ -41,13 +60,15 @@ class CVMaker extends React.Component {
                                 <h3>THÔNG TIN</h3>
                             </div>
                             <div className={`${styles.CVMaker__left__info__job}`}>
-                                <InputWithTitle title="Giới tính" placeholder="Nam" />
-                                <InputWithTitle title="Ngày sinh" placeholder="16-07-1999" />
-                                <InputWithTitle title="Email" placeholder="toanleaderuet@gmail.com" />
-                                <InputWithTitle title="Điện thoại" placeholder="0368604656" />
-                                <InputWithTitle title="Địa chỉ" placeholder="63/1/33 Trần Quốc Vượng" />
+                                <InputWithTitle title="Giới tính" placeholder="Nam" name="sex" changed = {this.onHandleChange} />
+                                <InputWithTitle title="Ngày sinh" placeholder="16-07-1999" type="date" name = "birthday" changed = {this.onHandleChange}/>
+                                <InputWithTitle title="Email" placeholder="toanleaderuet@gmail.com" name = "email" changed = {this.onHandleChange}/>
+                                <InputWithTitle title="Điện thoại" placeholder="0368604656" name = "phone" changed = {this.onHandleChange}/>
+                                <InputWithTitle title="Địa chỉ" placeholder="63/1/33 Trần Quốc Vượng" name = "address" changed = {this.onHandleChange}/>
                             </div>
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__skill}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-chart-bar"></i>
@@ -60,6 +81,8 @@ class CVMaker extends React.Component {
                                 <Input placeholder="Nhập kĩ năng" />
                             </div>
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-heart"></i>
@@ -75,6 +98,7 @@ class CVMaker extends React.Component {
                         </div>
                     </div>
                     <div className={`${styles.CvMaker__right}`}>
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-folder-open"></i>
@@ -85,9 +109,11 @@ class CVMaker extends React.Component {
                                 <h3>MỤC TIÊU</h3>
                             </div>
                             <div className={`${styles.CVMaker__left__info__job}`}>
-                                <Input placeholder="Nhập mục tiêu nghề nghiệp" />
+                                <Input placeholder="Nhập mục tiêu nghề nghiệp" name = "jobPurpose" changed = {this.onHandleChange}/>
                             </div>
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-briefcase"></i>
@@ -99,6 +125,8 @@ class CVMaker extends React.Component {
                             </div>
                             <Experience name="" />
                         </div>
+                        
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-graduation-cap"></i>
@@ -108,8 +136,10 @@ class CVMaker extends React.Component {
                                 <span className={`${styles.line}`}></span>
                                 <h3>HỌC VẤN</h3>
                             </div>
-                            <Education />
+                            <Hocvan />
                         </div>
+
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-laptop"></i>
@@ -124,20 +154,15 @@ class CVMaker extends React.Component {
                             </div>
                         </div>
 
+                        {/* =================== */}
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
                                 <i className="fas fa-headphones-alt"></i>
                             </div>
-
                             <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
                                 <span className={`${styles.line}`}></span>
                                 <h3>TIẾNG ANH</h3>
                             </div>
-                            {/* <div className={`${styles.CVMaker__left__info__job}`} >
-                                <input  type="text" 
-                                        name="name"
-                                className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
-                            </div> */}
                             <Education />
                         </div>
                     </div>

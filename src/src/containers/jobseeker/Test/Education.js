@@ -4,7 +4,7 @@ import A from './../CvMaker1/Star';
 import Vote from './../../../components/UI/Vote/Vote'
 
 class Education extends React.Component {
-    
+
     constructor() {
         super();
         this.state = {
@@ -16,10 +16,8 @@ class Education extends React.Component {
                     info: 'Đơn Vị Đào Tạo',
                     info1: 'Chuyên ngành',
                     info2: 'Trình độ',
-                    info3 : 'Loại tốt nghiệp'
+                    info3: 'Loại tốt nghiệp'
                 },
-            
-
             ]
 
         }
@@ -32,7 +30,7 @@ class Education extends React.Component {
             info2: 'Trình độ'
         }
 
-
+        // this.handleRemove = this.handleRemove.bind(this);
 
     }
     onChange = (event) => {
@@ -46,7 +44,7 @@ class Education extends React.Component {
 
     }
 
-    
+
 
 
     addInput = () => {
@@ -57,9 +55,11 @@ class Education extends React.Component {
             ]
         })
     }
-    handleRemove = (index) => {
-        this.state.data.splice(index, 1);
-        this.setState({ data: this.state.data })
+    handleRemove(index){
+        debugger;
+        let data = this.state.data.splice(index, 1);
+        console.log(data);
+        this.setState({ data: data })
     }
     handleSubmit = (e) => {
         console.log(this.state);
@@ -70,23 +70,19 @@ class Education extends React.Component {
                 {this.state.data.map((item, index) => (
                     <div className={`row ${styles.row}`}>
 
-                    {/* <p className={`${styles.changeline}`}>
-                    <b>Nghe</b>
-                    <A/>
-                  </p> */}
-                  <Vote />
-                  <p className={`${styles.changeline}`}>
-                    <b>Nói</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Đọc</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Viết</b>
-                    <A />
-                  </p>
+                        <Vote />
+                        <p className={`${styles.changeline}`}>
+                            <b>Nói</b>
+                            <A />
+                        </p>
+                        <p className={`${styles.changeline}`}>
+                            <b>Đọc</b>
+                            <A />
+                        </p>
+                        <p className={`${styles.changeline}`}>
+                            <b>Viết</b>
+                            <A />
+                        </p>
                         <div className={styles.block_actions}>
                             <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
                             <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>

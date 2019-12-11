@@ -56,9 +56,11 @@ class HocVan extends React.Component {
             ]
         })
     }
-    handleRemove = (index) => {
-        this.state.data.splice(index, 1);
-        this.setState({ data: this.state.data })
+    handleRemove(index){
+        debugger;
+        let data = this.state.data.splice(index, 1);
+        console.log(data);
+        this.setState({ data: data })
     }
     handleSubmit = (e) => {
         console.log(this.state);
