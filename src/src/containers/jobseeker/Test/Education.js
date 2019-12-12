@@ -1,36 +1,44 @@
 import React from 'react';
 import styles from './Test.scss';
-import Vote from '../../../components/UI/Vote/Vote'
+import A from '../CvMaker1/Star'
 
-class Education extends React.Component {
+class HocVan extends React.Component {
 
     constructor() {
         super();
         this.state = {
             data: [
                 {
-                    id: '1',
-                    time: '4/11',
-                    time1: '7/11',
-                    info: 'Đơn Vị Đào Tạo',
-                    info1: 'Chuyên ngành',
-                    info2: 'Trình độ',
-                    info3: 'Loại tốt nghiệp'
+                    timeStart: '',
+                    timeEnd: '',
+                    trainingUnit: '',
+                    specialized: '',
+                    level: '',
+                    graduationType: ''
                 },
+
+
             ]
 
         }
 
         this.initialData = {
-            time: '4/11',
-            time1: '7/11',
-            info: 'Đơn Vị Đào Tạo',
-            info1: 'Chuyên ngành',
-            info2: 'Trình độ'
+            timeStart: '4/11',
+            timeEnd: '7/11',
+            trainingUnit: 'Đơn Vị Đào Tạo',
+            specialized: 'Chuyên ngành',
+            level: 'Trình độ',
+            graduationType: 'Loại tốt nghiệp'
         }
 
-        // this.handleRemove = this.handleRemove.bind(this);
 
+
+    }
+    handleRemove = () => {
+        this.props.handleRemove(this.props.index)
+    }
+    addInput = () => {
+        this.props.addInput(this.props.index)
     }
     onChange = (event) => {
         let target = event.target
@@ -40,54 +48,37 @@ class Education extends React.Component {
         this.setState({
             [name]: value
         })
+        let data = this.state;
+        data[name] = value;
+        this.props.onChange(data, this.props.index)
 
     }
 
-
-
-
-    addInput = () => {
-        this.setState({
-            data: [
-                ...this.state.data,
-                this.initialData
-            ]
-        })
-    }
-    handleRemove(index){
-        debugger;
-        let data = this.state.data.splice(index, 1);
-        console.log(data);
-        this.setState({ data: data })
-    }
-    handleSubmit = (e) => {
-        console.log(this.state);
-    }
     render() {
         return (
-            <div>
-                {this.state.data.map((item, index) => (
-                    <div className={`row ${styles.row}`}>
+            <div className={`row ${styles.row}`}>
 
-                        <Vote name="Nghe" />
-                        <Vote name="Nói"/>
-                        <Vote name="Đọc"  />
-                        <Vote name="Viết" />
+                <div className={` col-md-3  ${styles.row1__time}`}>
+                    <textarea className={`${styles.input1}`} name="timeStart" value={this.props.data.timeStart} placeholder={this.initialData.timeStart} onChange={this.onChange} />-
+                    <textarea className={`${styles.input1}`} name="timeEnd" value={this.props.data.timeEnd} placeholder={this.initialData.timeEnd} onChange={this.onChange} />
 
-                        <div className={styles.block_actions}>
-                            <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
-                            <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
-                        </div>
-                    </div>
-
-                ))}
-
-
-                {/* <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button> */}
-
+                </div>
+                <div className={`col-md-9  ${styles.row1__info}`}>
+                <textarea className={`${styles.input2}`} name="trainingUnit" value={this.props.data.trainingUnit} placeholder={this.initialData.trainingUnit} onChange={this.onChange} />
+                    <span>Chuyên ngành</span>
+                    <textarea className={`${styles.input2}`} name="specialized" value={this.props.data.specialized} placeholder={this.initialData.specialized} onChange={this.onChange} />
+                    <span>Trình độ</span>
+                    <textarea className={`${styles.input2}`} name="level" value={this.props.data.level} placeholder={this.initialData.level} onChange={this.onChange} />
+                    <span>Loại tốt nghiệp</span>
+                    <textarea className={`${styles.input2}`} name="graduationType" value={this.props.data.graduationType} placeholder={this.initialData.graduationType} onChange={this.onChange} />
+                </div>
+                <div className={styles.block_actions}>
+                    <button className={`del ${styles.actions}`} onClick={this.handleRemove}>-Xóa</button>
+                    <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
+                </div>
             </div>
         )
     }
 }
 
-export default Education;
+export default HocVan;

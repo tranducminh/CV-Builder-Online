@@ -1,9 +1,9 @@
 import React from 'react';
 import styles from './Test.scss';
-import A from '../CvMaker1/Star'
+import Vote from '../../../components/UI/Vote/Vote'
 
-class HocVan extends React.Component {
-    
+class Education extends React.Component {
+
     constructor() {
         super();
         this.state = {
@@ -15,10 +15,8 @@ class HocVan extends React.Component {
                     info: 'Đơn Vị Đào Tạo',
                     info1: 'Chuyên ngành',
                     info2: 'Trình độ',
-                    info3 : 'Loại tốt nghiệp'
+                    info3: 'Loại tốt nghiệp'
                 },
-            
-
             ]
 
         }
@@ -31,7 +29,7 @@ class HocVan extends React.Component {
             info2: 'Trình độ'
         }
 
-
+        // this.handleRemove = this.handleRemove.bind(this);
 
     }
     onChange = (event) => {
@@ -45,7 +43,7 @@ class HocVan extends React.Component {
 
     }
 
-    
+
 
 
     addInput = () => {
@@ -71,20 +69,11 @@ class HocVan extends React.Component {
                 {this.state.data.map((item, index) => (
                     <div className={`row ${styles.row}`}>
 
-                        <div className={` col-md-3  ${styles.row1__time}`}>
-                            <textarea className={`${styles.input1}`} name="time" contentEditable="true" placeholder={item.time} onChange={this.onChange} />-
-                            <textarea className={`${styles.input1}`} name="time1" contentEditable="true" placeholder={item.time1} onChange={this.onChange} />
+                        <Vote name="Nghe" />
+                        <Vote name="Nói"/>
+                        <Vote name="Đọc"  />
+                        <Vote name="Viết" />
 
-                        </div>
-                        <div className={`col-md-9  ${styles.row1__info}`}>
-                            <textarea className={`${styles.input2}`} name="info" contentEditable="true" placeholder={item.info} onChange={this.onChange} />
-                            <span>Chuyên ngành</span>
-                            <textarea className={`${styles.input2}`} name="info1" contentEditable="true" placeholder={item.info1} onChange={this.onChange} />
-                            <span>Trình độ</span>
-                            <textarea className={`${styles.input2}`} name="info2" contentEditable="true" placeholder={item.info2} onChange={this.onChange} />
-                            <span>Loại tốt nghiệp</span>
-                            <textarea className={`${styles.input2}`} name="info2" contentEditable="true" placeholder={item.info3} onChange={this.onChange} />
-                        </div>
                         <div className={styles.block_actions}>
                             <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
                             <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
@@ -101,4 +90,4 @@ class HocVan extends React.Component {
     }
 }
 
-export default HocVan;
+export default Education;

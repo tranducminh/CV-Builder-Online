@@ -50,16 +50,16 @@ class Experience extends React.Component {
 
 
                 <div className={` col-md-3  ${styles.row1__time}`}>
-                    <textarea className={`${styles.input1}`} name="timeStart" value={this.props.data.timeStart} onChange={this.onChange} />-
-                    <textarea className={`${styles.input1}`} name="timeEnd" value={this.props.data.timeEnd} onChange={this.onChange} />
+                    <textarea className={`${styles.input1}`} name="timeStart" value={this.props.data.timeStart} placeholder={this.initialData.timeStart} onChange={this.onChange} />-
+                    <textarea className={`${styles.input1}`} name="timeEnd" value={this.props.data.timeEnd} placeholder={this.initialData.timeEnd} onChange={this.onChange} />
 
                 </div>
                 <div className={`col-md-9  ${styles.row1__info}`}>
-                    <textarea className={`${styles.input2}`} name="jobPosition" value={this.props.data.jobPosition} onChange={this.onChange} />
+                    <textarea className={`${styles.input2}`} name="jobPosition" value={this.props.data.jobPosition} placeholder={this.initialData.jobPosition} onChange={this.onChange} />
                     <span>Mô tả công việc</span>
-                    <textarea className={`${styles.input2}`} name="jobDescription" value={this.props.data.jobDescription} onChange={this.onChange} />
+                    <textarea className={`${styles.input2}`} name="jobDescription" value={this.props.data.jobDescription} placeholder={this.initialData.jobDescription} onChange={this.onChange} />
                     <span>Thành tích đạt được</span>
-                    <textarea className={`${styles.input2}`} name="achievements" value={this.props.data.achievements} onChange={this.onChange} />
+                    <textarea className={`${styles.input2}`} name="achievements"  value={this.props.data.achievements}placeholder={this.initialData.achievements} onChange={this.onChange} />
                 </div>
                 <div className={styles.block_actions}>
                     <button className={`del ${styles.actions}`} onClick={this.handleRemove}>-Xóa</button>

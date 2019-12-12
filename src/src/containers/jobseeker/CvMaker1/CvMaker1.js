@@ -1,10 +1,9 @@
 import React from 'react';
 import avt from './../../../assets/image/avt.png';
-import Education from '../Test/Education';
+import EducationList from '../Test/EducationList';
 import ExperienceList from './../Test/ExperienceList'
-import HocVan from './../Test/HocVan'
+import Language from './../Test/Language'
 import Experience from './../Test/Experience'
-import HocVan from './../Test/HocVan';
 import Computer from './../Test/Computer';
 import Vote from '../../../components/UI/Vote/Vote'
 import styles from './CvMaker1.scss';
@@ -68,28 +67,7 @@ class CVMaker1 extends React.Component {
                                     <h3>TIN HỌC</h3>
                                 </div>
                                 <Computer />
-                                {/* <div className={`${styles.CVMaker__left__info__job}`}>
-                  <p className={`${styles.changeline}`}>
-                    <b>Word</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Excel</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Power Point</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Outlook</b>
-                    <A />
-                  </p>
-                  <p className={`${styles.changeline}`}>
-                    <b>Địa chỉ</b>
-                    <A />
-                  </p>
-                </div> */}
+                                
                             </div>
                             <div className={styles.addblock}>
                                 <button >Add block</button>
@@ -136,10 +114,8 @@ class CVMaker1 extends React.Component {
                                 <span className={`${styles.line1}`}></span>
                                 <h3>HỌC VẤN</h3>
                             </div>
-                            {/* <div className={`${styles.CVMaker__left__info__job}`}>
-                                <input className={`change ${styles.change2}`} placeholder="Nhập sở thích" contenteditable="true" />
-                            </div> */}
-                            <HocVan name="" />
+                            
+                            <EducationList/>
                         </div>
                         <div className={`box ${styles.CVMaker__left__like}`}>
                             <div className={`icon ${styles.icon}`}>
@@ -151,7 +127,7 @@ class CVMaker1 extends React.Component {
                                 <h3>TIẾNG ANH</h3>
                             </div>
 
-                            <Education />
+                            <Language />
                         </div>
                         <div className={styles.addblock}>
                             <button >Add block</button>

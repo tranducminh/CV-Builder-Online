@@ -8,6 +8,11 @@ export default class App extends Component {
   activeColor: '#1d99df',
   maxStars: 10,};
   
+  componentDidUpdate(prevProps, prevState){
+    if(this.state.value != prevState.value){
+      
+    }
+  }
   render() {
     return (
       <div className={styles.wrapper}>
