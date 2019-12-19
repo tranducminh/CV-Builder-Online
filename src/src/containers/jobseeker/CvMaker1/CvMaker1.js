@@ -2,19 +2,71 @@ import React from 'react';
 import avt from './../../../assets/image/avt.png';
 import EducationList from '../Test/EducationList';
 import ExperienceList from './../Test/ExperienceList'
-import Language from './../Test/Language'
-import Experience from './../Test/Experience'
+import LanguageList from './../Test/LanguageList'
 import Computer from './../Test/Computer';
-import Vote from '../../../components/UI/Vote/Vote'
 import styles from './CvMaker1.scss';
-import Input from '../../../components/UI/Input/Input';
 import InputWithTitle from '../../../components/UI/InputForm/WithTitle/Input';
-import A from './Star';
+import Title from '../../../components/UI/Title/Type1/Title';
+import CV1 from '../ExportPDF/CV1/CV1';
+import { PDFDownloadLink, PDFViewer } from '@react-pdf/renderer'
+import ReactPDF from '@react-pdf/renderer';
 class CVMaker1 extends React.Component {
 
-    onClick = () => {
-
+    constructor(props) {
+        super(props);
+        this.state = {
+            cvType: null,
+            cv_info: {
+                title: "",
+                jobPurpose: "",
+                email: "",
+                fullname: "",
+                birthday: "",
+                sex: "",
+                image: "",
+                phone: "",
+                address: ""
+            },
+            educations: [
+                {
+                    timeStart: "",
+                    timeEnd: "",
+                    specialized: "",
+                    level: 0,
+                    graduationType: ""
+                }
+            ],
+            experiences: [
+                {
+                    timeStart: "",
+                    timeEnd: "",
+                    jobPosition: "",
+                    jobDescription: "",
+                    achievements: ""
+                }
+            ],
+            languages: [
+                {
+                    lgName: "",
+                    language_skills: [
+                        {
+                            skillName: "",
+                            level: 0
+                        }
+                    ]
+                }
+            ],
+            itSkills: {
+                it_skill_infos: [
+                    {
+                        skillName: "",
+                        level: 0
+                    }
+                ]
+            }
+        }
     }
+
     render() {
         return (
             <div className={`${styles.container}`}>
@@ -38,17 +90,10 @@ class CVMaker1 extends React.Component {
                             <textarea className={` ${styles.change2}`} name="info" contentEditable="true" placeholder="Nhập mục tiêu nghề nghiệp" onChange={this.onChange} />
                         </div>
                     </div>
-                    {/* <A /> */}
                     <div className={styles.row2}>
                         <div className={styles.row_left}>
                             <div className={`box ${styles.CVMaker__left__info}`}>
-                                <div className={`icon ${styles.icon}`}>
-                                    <i className="fas fa-mobile-alt"></i>
-                                </div>
-                                <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                    <span className={`${styles.line1}`}></span>
-                                    <h3>THÔNG TIN</h3>
-                                </div>
+                                <Title icon="fas fa-mobile-alt" title="THÔNG TIN" />
                                 <div className={`${styles.CVMaker__left__info__job}`}>
                                     <InputWithTitle title="Giới tính" placeholder="Nam" />
                                     <InputWithTitle title="Ngày sinh" placeholder="16-07-1999" />
@@ -58,110 +103,32 @@ class CVMaker1 extends React.Component {
                                 </div>
                             </div>
                             <div className={`box ${styles.CVMaker__left__like}`}>
-                                <div className={`icon ${styles.icon}`}>
-                                    <i className="fas fa-laptop"></i>
-                                </div>
-
-                                <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                    <span className={`${styles.line1}`}></span>
-                                    <h3>TIN HỌC</h3>
-                                </div>
+                                <Title icon="fas fa-laptop" title="TIN HỌC" />
                                 <Computer />
-                                
-                            </div>
-                            <div className={styles.addblock}>
-                                <button >Add block</button>
-                                <ul className={styles.addBlockItem} onClick={this.onClick} >
-                                    <li>
-                                        <i class="fas fa-skiing"></i>
-                                        <span className={styles.title}>Skill</span>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-file-alt"></i>
-                                        <span className={styles.title}>Text</span>
-                                    </li>
 
-                                </ul>
                             </div>
                         </div>
                         <div className={styles.row_right}>
                             <div className={`box ${styles.CVMaker__left__like}`}>
-                                <div className={`icon ${styles.icon}`}>
-                                    <i className="fas fa-briefcase"></i>
-                                </div>
-
-                                
+                                <Title icon="fas fa-briefcase" title="KINH NGHIỆM" />
+                                <ExperienceList />
+                            </div>
+                            <div className={`box ${styles.CVMaker__left__like}`}>
+                                <Title icon="fas fa-briefcase" title="HỌC VẤN" />
+                                <EducationList />
+                            </div>
+                            <div className={`box ${styles.CVMaker__left__like}`}>
+                                <Title icon="fas fa-headphones-alt" title="NGOẠI NGỮ" />
+                                <LanguageList />
+                            </div>
                         </div>
                     </div>
-                    <div className={styles.row_right}>
-                        <div className={`box ${styles.CVMaker__left__like}`}>
-                            <div className={`icon ${styles.icon}`}>
-                                <i className="fas fa-briefcase"></i>
-                            </div>
-
-                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                <span className={`${styles.line1}`}></span>
-                                <h3>KINH NGHIỆM</h3>
-                            </div>
-                            <ExperienceList />
-                        </div>
-                        <div className={`box ${styles.CVMaker__left__like}`}>
-                            <div className={`icon ${styles.icon}`}>
-                                <i className="fas fa-briefcase"></i>
-                            </div>
-
-                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                <span className={`${styles.line1}`}></span>
-                                <h3>HỌC VẤN</h3>
-                            </div>
-                            
-                            <EducationList/>
-                        </div>
-                        <div className={`box ${styles.CVMaker__left__like}`}>
-                            <div className={`icon ${styles.icon}`}>
-                                <i className="fas fa-headphones-alt"></i>
-                            </div>
-
-                            <div className={`nameBox ${styles.CVMaker__left__info__name}`}>
-                                <span className={`${styles.line1}`}></span>
-                                <h3>TIẾNG ANH</h3>
-                            </div>
-
-                            <Language />
-                        </div>
-                        <div className={styles.addblock}>
-                            <button >Add block</button>
-                            <ul className={styles.addBlockItem} onClick={this.onClick} >
-                                <li>
-                                    <i class="fas fa-skiing"></i>
-                                    <span className={styles.title}>Skill</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-file-alt"></i>
-                                    <span className={styles.title}>Text</span>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div className={styles.addblock}>
-                            <button >Add block</button>
-                            <ul className={styles.addBlockItem} onClick={this.onClick} >
-                                <li>
-                                    <i class="fas fa-skiing"></i>
-                                    <span className={styles.title}>Skill</span>
-                                </li>
-                                <li>
-                                    <i class="fas fa-file-alt"></i>
-                                    <span className={styles.title}>Text</span>
-                                </li>
-
-                            </ul>
-                        </div>
-
-                    </div>
-
                 </div>
-            </div>
+                <div>
+                    {/* <PDFDownloadLink document={<CV1 />} fileName="somename.pdf">
+                        {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+                    </PDFDownloadLink> */}
+                </div>
 
             </div >
         )

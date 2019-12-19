@@ -1,34 +1,34 @@
-import React, { Component } from 'react'
-import Vote from './Vote';
-import styles from './Vote.scss'
+import React, { Component } from 'react';
+import styles from './Test.scss';
+import Language from './Language';
 
-export default class VoteList extends Component {
+export default class LanguageList extends Component {
     constructor(props) {
         super(props);
         this.state = {
             data: [
                 {
-                    skillName: '',
-                    level: 0
+                    lgName: "",
+                    language_skills: []
                 }
             ]
         }
-        this.initialData = this.props.initialData
+        this.initialData = {
+            lgName: "",
+            language_skills: []
+        }
     }
-
     addInput = (index) => {
         let data = this.state.data;
         data.splice(index + 1, 0, this.initialData)
         this.setState({
             data: data
         })
-        this.props.onChange(this.state.data)
     }
     handleRemove = (index) => {
         let data = this.state.data;
         data.splice(index, 1);
         this.setState({ data: data })
-        this.props.onChange(this.state.data)
     }
     onChange = (data, index) => {
         let state = this.state.data;
@@ -36,14 +36,14 @@ export default class VoteList extends Component {
         this.setState({
             data: state
         })
-        this.props.onChange(this.state.data)
+        console.log(this.state);
     }
 
     render() {
         return (
-            <div className={styles.voteRow}>
+            <div>
                 {this.state.data.map((item, index) => (
-                    <Vote data={item} index={index} addInput={this.addInput} handleRemove={this.handleRemove} onChange={this.onChange} initialData={this.initialData} />
+                    <Language data={item} index={index} addInput={this.addInput} handleRemove={this.handleRemove} onChange={this.onChange} />
                 ))}
             </div>
         )

@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom'
 import Homepage from '../HomePage1/HomePage1';
 import CV1 from '../CvMaker/CvMaker';
 import CV2 from '../CvMaker1/CvMaker1';
+import CV2Preview from '../ExportPDF/CV1/CV1Preview';
 import Login from './../../Login/Login';
 import SignUp from './../../SignUp/SignUp';
 import Profile from './../Profile/Profile';
@@ -26,6 +27,7 @@ class JobseekerMain extends React.Component {
                 <Switch className={styles.JobseekerMain}>
                     <Route path='/' exact component={Homepage}  className ={styles.HomepageJob}/>
                     <Route path='/cv1' component={CV1} />
+                    <Route path='/cv2/preview' component={CV2Preview} />
                     <Route path='/cv2' component={CV2} />
                     <Route path={process.env.REACT_APP_PATH_LOGIN} component={Login} />
                     <Route path={process.env.REACT_APP_PATH_SIGNUP} component={SignUp}/>

@@ -7,21 +7,13 @@ class HocVan extends React.Component {
     constructor() {
         super();
         this.state = {
-            data: [
-                {
-                    timeStart: '',
-                    timeEnd: '',
-                    trainingUnit: '',
-                    specialized: '',
-                    level: '',
-                    graduationType: ''
-                },
-
-
-            ]
-
+            timeStart: '',
+            timeEnd: '',
+            trainingUnit: '',
+            specialized: '',
+            level: '',
+            graduationType: ''
         }
-
         this.initialData = {
             timeStart: '4/11',
             timeEnd: '7/11',
@@ -30,9 +22,6 @@ class HocVan extends React.Component {
             level: 'Trình độ',
             graduationType: 'Loại tốt nghiệp'
         }
-
-
-
     }
     handleRemove = () => {
         this.props.handleRemove(this.props.index)
@@ -64,7 +53,7 @@ class HocVan extends React.Component {
 
                 </div>
                 <div className={`col-md-9  ${styles.row1__info}`}>
-                <textarea className={`${styles.input2}`} name="trainingUnit" value={this.props.data.trainingUnit} placeholder={this.initialData.trainingUnit} onChange={this.onChange} />
+                    <textarea className={`${styles.input2}`} name="trainingUnit" value={this.props.data.trainingUnit} placeholder={this.initialData.trainingUnit} onChange={this.onChange} />
                     <span>Chuyên ngành</span>
                     <textarea className={`${styles.input2}`} name="specialized" value={this.props.data.specialized} placeholder={this.initialData.specialized} onChange={this.onChange} />
                     <span>Trình độ</span>

@@ -1,36 +1,30 @@
 import React from 'react';
 import styles from './Test.scss';
-import Vote from '../../../components/UI/Vote/Vote'
+import VoteList from '../../../components/UI/Vote/VoteList'
 
 class Education extends React.Component {
 
     constructor() {
         super();
         this.state = {
-            data: [
-                {
-                    id: '1',
-                    time: '4/11',
-                    time1: '7/11',
-                    info: 'Đơn Vị Đào Tạo',
-                    info1: 'Chuyên ngành',
-                    info2: 'Trình độ',
-                    info3: 'Loại tốt nghiệp'
-                },
-            ]
-
+            lgName: "",
+            language_skills: []
         }
-
         this.initialData = {
-            time: '4/11',
-            time1: '7/11',
-            info: 'Đơn Vị Đào Tạo',
-            info1: 'Chuyên ngành',
-            info2: 'Trình độ'
+            lgName: "",
+            language_skills: [
+                {
+                    skillName: "Nghe",
+                    level: 0
+                }
+            ]
         }
-
-        // this.handleRemove = this.handleRemove.bind(this);
-
+    }
+    handleRemove = () => {
+        this.props.handleRemove(this.props.index)
+    }
+    addInput = () => {
+        this.props.addInput(this.props.index)
     }
     onChange = (event) => {
         let target = event.target
@@ -40,51 +34,28 @@ class Education extends React.Component {
         this.setState({
             [name]: value
         })
+        let data = this.state;
+        data[name] = value;
+        this.props.onChange(data, this.props.index)
 
     }
-
-
-
-
-    addInput = () => {
+    onVoteChange = (data) => {
         this.setState({
-            data: [
-                ...this.state.data,
-                this.initialData
-            ]
+            language_skills: data
         })
-    }
-    handleRemove(index){
-        debugger;
-        let data = this.state.data.splice(index, 1);
-        console.log(data);
-        this.setState({ data: data })
-    }
-    handleSubmit = (e) => {
-        console.log(this.state);
+        this.props.onChange(this.state, this.props.index)
     }
     render() {
         return (
             <div>
-                {this.state.data.map((item, index) => (
-                    <div className={`row ${styles.row}`}>
-
-                        <Vote name="Nghe" />
-                        <Vote name="Nói"/>
-                        <Vote name="Đọc"  />
-                        <Vote name="Viết" />
-
-                        <div className={styles.block_actions}>
-                            <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
-                            <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
-                        </div>
+                <div className={`row ${styles.row}`}>
+                    <input className={styles.title} placeholder="Tiếng anh" value={this.props.data.lgName} onChange={this.onChange} name="lgName"/>
+                    <VoteList initialData = {this.initialData.language_skills[0]} onChange={this.onVoteChange}/>
+                    <div className={styles.block_actions}>
+                        <button className={`del ${styles.actions}`} onClick={this.handleRemove}>-Xóa</button>
+                        <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
                     </div>
-
-                ))}
-
-
-                {/* <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button> */}
-
+                </div>
             </div>
         )
     }

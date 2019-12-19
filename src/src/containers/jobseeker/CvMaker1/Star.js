@@ -3,14 +3,14 @@ import styles from './Star.scss';
 import BeautyStars from 'beauty-stars';
 
 export default class App extends Component {
-  state = { value: 0,
+  state = { value: this.props.value,
   size :'11px' ,
   activeColor: '#1d99df',
   maxStars: 10,};
   
   componentDidUpdate(prevProps, prevState){
     if(this.state.value != prevState.value){
-      
+      this.props.onChange(this.state.value);
     }
   }
   render() {
@@ -18,7 +18,7 @@ export default class App extends Component {
       <div className={styles.wrapper}>
         <BeautyStars
           size = {this.state.size}
-          value={this.state.value}
+          value={this.props.value}
           // maxStars = {this.state.maxStars}
           activeColor ={this.state.activeColor}
           onChange={value => this.setState({ value })}

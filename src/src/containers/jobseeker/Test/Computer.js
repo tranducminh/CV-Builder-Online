@@ -1,68 +1,37 @@
 import React from 'react';
 import styles from './Test.scss';
-import Vote from '../../../components/UI/Vote/Vote';
+import VoteList from '../../../components/UI/Vote/VoteList';
 
 class Computer extends React.Component {
-    
+
     constructor() {
         super();
         this.state = {
-            data: []
-
+            itSkills: [
+                {
+                    skillName: "",
+                    level: 0
+                }
+            ]
         }
 
-        this.initialData = {}
+        this.initialData = {
+            skillName: "Excel",
+            level: 0
+        }
     }
-    onChange = (event) => {
-        let target = event.target
-        let value = target.value
-        let name = target.name
-
+    onChange = (data) => {
         this.setState({
-            [name]: value
-        })
-
-    }
-
-    
-
-
-    addInput = () => {
-        this.setState({
-            data: [
-                ...this.state.data,
-                this.initialData
-            ]
+            itSkills: data
         })
     }
-    handleRemove = (index) => {
-        this.state.data.splice(index, 1);
-        this.setState({ data: this.state.data })
-    }
-    handleSubmit = (e) => {
-        console.log(this.state);
-    }
+
     render() {
         return (
             <div>
-                {this.state.data.map((item, index) => (
-                    <div className={`row ${styles.row}`}>
-                  <Vote name="Nghe"/>
-                  <Vote name="Nói"/>
-                  <Vote name="Đọc"/>
-                  <Vote name="Viết"/>
-                 
-                        <div className={styles.block_actions}>
-                            <button className={`del ${styles.actions}`} onClick={() => this.handleRemove(index)}>-Xóa</button>
-                            <button className={`add ${styles.actions}`} onClick={this.addInput}>+Thêm</button>
-                        </div>
-                    </div>
-
-                ))}
-
-
-                {/* <button className={styles.actions} onClick={(e) => this.handleSubmit(e)}>Submit</button> */}
-
+                <div className={`row ${styles.row}`}>
+                    <VoteList initialData={this.initialData} onChange={this.onChange} />
+                </div>
             </div>
         )
     }

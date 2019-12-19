@@ -4,31 +4,54 @@ import A from './../../../containers/jobseeker/CvMaker1/Star'
 
 class Vote extends React.Component {
 
-    constructor() {
-        super();
+    constructor(props) {
+        super(props);
         this.state = {
-            skillName: '',
-            level: ''
+            skillName: this.props.data.skillName,
+            level: this.props.data.level
         }
+        this.initialData = this.props.initialData
     }
-    handleRemove = (index) => {
-        this.state.data.splice(index, 1);
-        this.setState({ data: this.state.data })
-        
+    handleRemove = () => {
+        this.props.handleRemove(this.props.index)
     }
+    addInput = () => {
+        this.props.addInput(this.props.index)
+    }
+
+    onChange = (level) => {
+        this.setState({
+            level: level
+        })
+        this.props.onChange({
+            skillName: this.props.data.skillName,
+            level: level
+        },
+            this.props.index);
+    }
+    onHandleChange = (event) => {
+        let target = event.target
+        let value = target.value
+        let name = target.name
+
+        this.setState({
+            [name]: value
+        })
+        let data = this.state;
+        data[name] = value;
+        // console.log(data);
+        this.props.onChange(data, this.props.index)
+    }
+
     render() {
         return (
-            <div className={styles.voteRow}>
-                
-                    <div className={styles.vote}>
-                        <b contentEditable="true" className={styles.dataName}>{this.props.name}</b>
-                        <A />
-                        <div className={styles.block_actions}>
-                            <button className={` ${styles.delAction}`}>Xóa</button>
-                            
-                        </div>
-                    </div>
-                
+            <div className={styles.vote}>
+                <input contentEditable="true" className={styles.dataName} onChange={this.onHandleChange} name="skillName" value={this.props.data.skillName} placeholder={this.initialData.skillName}/>
+                <A onChange={this.onChange} value={this.props.data.level} />
+                <div className={styles.block_actions}>
+                    <button className={styles.addAction} onClick={this.addInput}>+</button>
+                    <button className={styles.delAction} onClick={this.handleRemove}>x</button>
+                </div>
             </div>
         )
     }
